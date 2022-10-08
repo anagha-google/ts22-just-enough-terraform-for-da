@@ -30,5 +30,5 @@ echo "gcp_zone = "\"${YOUR_GCP_ZONE}"\"" >> terraform.tfvars
 echo "gcp_multi_region = "\"${YOUR_GCP_MULTI_REGION}"\"" >> terraform.tfvars
 echo "bq_connector_jar_gcs_uri = "\"${BQ_CONNECTOR_JAR_GCS_URI}"\"" >> terraform.tfvars
 echo "cloud_scheduler_time_zone = "\"${CLOUD_SCHEDULER_TIME_ZONE}"\"" >> terraform.tfvars 
-echo "install_vertextai="\"false"\"" >> terraform.tfvars 
+echo "install_vertextai = "\"false"\"" >> terraform.tfvars 
 
