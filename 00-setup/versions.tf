@@ -9,3 +9,7 @@ terraform {
     module_name = "blueprints/terraform/test/v0.0.1"
   }
 }
+
+provider "google" {
+  project = var.project_id
+} 

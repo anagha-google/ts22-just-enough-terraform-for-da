@@ -551,7 +551,7 @@ resource "google_compute_global_address" "reserved_ip_for_psa_creation" {
   network       =  "projects/${local.project_id}/global/networks/s8s-vpc-${local.project_nbr}"
   address_type  = "INTERNAL"
   prefix_length = local.psa_ip_length
-  
+  project   = local.project_id
   depends_on = [
     module.vpc_creation
   ]
@@ -1156,7 +1156,7 @@ resource "google_composer_environment" "cloud_composer_env_creation" {
   name   = "${local.project_id}-cc2"
   region = local.location
   provider = google-beta
-
+  project = local.project_id
   config {
     software_config {
       image_version = local.CLOUD_COMPOSER2_IMG_VERSION 
@@ -1281,7 +1281,7 @@ resource "google_cloudfunctions2_function" "deploy_gcf_vai_pipeline_trigger" {
   name              = "mlops-vai-pipeline-executor-func"
   location          = local.location
   description       = "GCF gen2 to execute a model training Vertex AI pipeline"
-
+  project  = local.project_id
   build_config {
     runtime         = "python38"
     entry_point     = "process_request" 
