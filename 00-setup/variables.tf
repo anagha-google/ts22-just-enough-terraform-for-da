@@ -37,3 +37,9 @@ variable "bq_connector_jar_gcs_uri" {
 variable "cloud_scheduler_time_zone" {
  description = "Cloud Scheduler Time Zone e.g. America/Chicago"
 }
+
+variable "install_vertextai" {
+ description = "Cloud Scheduler Time Zone e.g. America/Chicago"
+ type = bool
+ default = true
+}
