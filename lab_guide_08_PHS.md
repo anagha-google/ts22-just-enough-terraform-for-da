@@ -39,6 +39,4 @@ We will use this later in the lab.<br>
 
 <hr>
 
-```
 
-<hr>
