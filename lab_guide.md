@@ -163,7 +163,7 @@ No changes. Your infrastructure matches the configuration.
 Terraform has compared your real infrastructure against your configuration and found no differences, so no changes are needed.
 ```
  
-### 7. Provision with Terraform - Creation of user managed service account and IAM role granting
+### 8. IAM: Creation of user managed service account and IAM role granting
 
 1. Move the file iam.tf as shown below to the Terraform root directory
 ```
@@ -190,7 +190,7 @@ terraform apply --auto-approve
 ```
  
 5. We ran "terraform init" again as we are using some new GCP providers, everytime you introduce a new provider, you have to run the init command.
-6. Validate the provisioning by going to Coloud Console -> IAM 
+6. Validate the provisioning by going to Cloud Console -> IAM 
 
 
 
