@@ -369,3 +369,7 @@ gs://ts22-jetfdc_notebook_bucket-1053039281529/python/google_trends_analysis.ipy
 ```
  
 <hr>
+ 
+### 12. BigQuery: Create dataset, table, load a CSV
+ 
+
