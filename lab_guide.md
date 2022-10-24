@@ -62,3 +62,15 @@ Check the directory to see what got created there.
 cd ~/ts22-just-enough-terraform-for-da/00-setup/
 ls -al
 ```
+
+Author's output is-
+```
+-rwxr-xr-x  1 admin_ admin_ 1645 Oct 24 16:37 configure-preferences.sh
+-rw-r--r--  1 admin_ admin_ 2869 Oct 24 16:19 main.tf
+drwxr-xr-x  2 admin_ admin_ 4096 Oct 24 16:08 module_apis_and_policies
+drwxr-xr-x  4 admin_ admin_ 4096 Oct 24 16:49 **.terraform**
+-rw-r--r--  1 admin_ admin_ 3335 Oct 24 16:49 **.terraform.lock.hcl**
+-rw-r--r--  1 admin_ admin_  460 Oct 24 16:38 terraform.tfvars
+-rw-r--r--  1 admin_ admin_  876 Oct 24 16:20 variables.tf
+-rw-r--r--  1 admin_ admin_  263 Oct 24 15:06 versions.tf
+```
