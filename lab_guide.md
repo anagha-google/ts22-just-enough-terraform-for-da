@@ -6,6 +6,8 @@ git clone https://github.com/anagha-google/ts22-just-enough-terraform-for-da.git
 cd ts22-just-enough-terraform-for-da
 ```
 
+<hr>
+
 ### 2. Configure your preferences in the preferences script
 
 2.1. Edit the file configure.sh under 00-setup for your preferences.<br>
@@ -47,6 +49,8 @@ update_org_policies = "true"
 
 ```
 
+<hr>
+
 ### 4. Initialize Terraform
 
 4.1. Run the init command in Cloud Shell-
@@ -75,6 +79,8 @@ drwxr-xr-x  4 admin_ admin_ 4096 Oct 24 16:49 **.terraform**
 -rw-r--r--  1 admin_ admin_  263 Oct 24 15:06 versions.tf
 ```
 
+<hr>
+
 ### 5. Review the Terraform execution plan
 
 Terraform Hashicorp Configuration Language (HCL) is declarative (and not imperative). When you run the plan, it studies the configuration and comes up with an execution plan. Review the plan in Cloud Shell.
@@ -85,6 +91,8 @@ terraform plan
 ```
 
 Study the output and see the number of resources provisioned.
+
+<hr>
 
 ### 6. Provision with Terraform - modularized enabling of Google APIs and Organization Policy updates
 
@@ -138,6 +146,7 @@ Apply complete! Resources: 19 added, 0 changed, 0 destroyed.
  
 6. Review the execution of the declarations in the module.
 
+<hr>
  
 ### 7. Terraform state
  
@@ -162,6 +171,8 @@ Terraform will just say-
 No changes. Your infrastructure matches the configuration.
 Terraform has compared your real infrastructure against your configuration and found no differences, so no changes are needed.
 ```
+ 
+<hr>
  
 ### 8. IAM: Creation of user managed service account and IAM role granting
 
@@ -196,6 +207,8 @@ In the end, you should see-
  
 5. We ran "terraform init" again as we are using some new GCP providers, everytime you introduce a new provider, you have to run the init command.
 6. Validate the provisioning by going to Cloud Console -> IAM 
+ 
+<hr>
 
 ### 9. Networking: Creation of VPC, Subnet, Firewall rule(s), reservered IP, VPC peering
  
@@ -234,6 +247,8 @@ Apply complete! Resources: 6 added, 0 changed, 0 destroyed.
 6. We ran "terraform init" again as we are using some new GCP providers, everytime you introduce a new provider, you have to run the init command.
 7. Validate the provisioning by going to Cloud Console -> Networking 
  
+<hr>
+ 
 ### 10. Storage: Creation buckets
  
 In this section, we will provision GCS buckets for Spark, dataproc, code, data, notebooks. <br>
@@ -268,4 +283,4 @@ Apply complete! Resources: 6 added, 0 changed, 0 destroyed.
 6. We ran "terraform init" again as we are using some new GCP providers, everytime you introduce a new provider, you have to run the init command.
 7. Validate the provisioning by going to Cloud Console -> Storage
 
-
+<hr>
