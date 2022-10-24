@@ -35,4 +35,9 @@ Apply complete! Resources: 1 added, 0 changed, 0 destroyed.
 a) Click on "clusters" in the left navigation panel<br>
 b) Review the deployment<br>
 
+9. Go to Web Interfaces, click on "JupyterHub".<br>
+10. Click on the notebook that opens up and execute the notebook. <br>
+
+This concludes the module.
+
 <hr>
