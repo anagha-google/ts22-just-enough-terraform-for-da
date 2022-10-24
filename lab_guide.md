@@ -116,10 +116,10 @@ cat ~/ts22-just-enough-terraform-for-da/00-setup/module_apis_and_policies/main.t
 It enables a bunch of APIs and depending on the boolean for updateing org policies, updates the same (or not)
 
 
-  4. Run the terraform
+4. Run the terraform
 ```
 cd ~/ts22-just-enough-terraform-for-da/00-setup/
-terraform apply
+terraform apply --auto-approve
 ```
 In case your are wondering where the variables are supplied, Terraform reads them from terraform.tfvars.
 <br>
@@ -127,12 +127,70 @@ In case your are wondering where the variables are supplied, Terraform reads the
 Terraform will enable the APIs and Org policies with as much parallelism as possible. Notice the "sleep" statements in the main.tf in the module. The reason for this is both API enabling and Org policy updates are async and return immediately after issuing the commands behind the scenes. This can cause issues if we run the next steps and if they are dependent on API enabling for example and if they have not completed.
   
 5. Observe the output<br>
+```
+ .........
+module.setup_foundations.time_sleep.sleep_after_api_enabling: Still creating... [2m50s elapsed]
+module.setup_foundations.time_sleep.sleep_after_api_enabling: Still creating... [3m0s elapsed]
+module.setup_foundations.time_sleep.sleep_after_api_enabling: Creation complete after 3m0s [id=2022-10-24T17:38:28Z]
+
+Apply complete! Resources: 19 added, 0 changed, 0 destroyed.
+```
+ 
 6. Review the execution of the declarations in the module.
-  
-  
+
+ 
+### 7. Terraform state
+ 
+When you ran the "terraform apply" command in #6, Terraform completed the action and persisted state locally. A best practice is to use a GCS bucket for state for multiple reasons - reslience, collaboration (team updates) and more. For the purpose of simplicity, we will persist state locally.
+ 
+1. Review the state file location by running the command below-
+```
+cd ~/ts22-just-enough-terraform-for-da/00-setup/
+ls -al
+```
+Note what is new.<br>
+ 
+2. Run the "terraform apply" command you ran previously again and observe the output
+ 
+```
+cd ~/ts22-just-enough-terraform-for-da/00-setup/
+terraform apply --auto-approve
+```
+ 
+Terraform will just say-
+```
+No changes. Your infrastructure matches the configuration.
+Terraform has compared your real infrastructure against your configuration and found no differences, so no changes are needed.
+```
+ 
 ### 7. Provision with Terraform - Creation of user managed service account and IAM role granting
 
-
+1. Move the file iam.tf as shown below to the Terraform root directory
+```
+cd ~/ts22-just-enough-terraform-for-da/00-setup/
+cp shelf/iam.tf .
+```
+2. Open the file and read its contents
+```
+cat ~/ts22-just-enough-terraform-for-da/00-setup/iam.tf
+```
+a) It first creates a user managed service account (UMSA),
+b) It then grants the UMSA IAM roles
+c) It also grants Google Managed Service accounts for specific services, roles as required by the services
+d) It then grants the admin user impersonation privileges on the UMSA
+e) For the rest of the lab, all services will be provisioned as the UMSA
+ 
+3. Terraform will run every .tf file in the root directory when an "apply" is issued.
+4. Run "terraform apply" command you ran previously again and observe the output
+ 
+```
+cd ~/ts22-just-enough-terraform-for-da/00-setup/
+terraform init
+terraform apply --auto-approve
+```
+ 
+5. We ran "terraform init" again as we are using some new GCP providers, everytime you introduce a new provider, you have to run the init command.
+6. Validate the provisioning by going to Coloud Console -> IAM 
 
 
 
