@@ -74,3 +74,66 @@ drwxr-xr-x  4 admin_ admin_ 4096 Oct 24 16:49 **.terraform**
 -rw-r--r--  1 admin_ admin_  876 Oct 24 16:20 variables.tf
 -rw-r--r--  1 admin_ admin_  263 Oct 24 15:06 versions.tf
 ```
+
+### 5. Review the Terraform execution plan
+
+Terraform Hashicorp Configuration Language (HCL) is declarative (and not imperative). When you run the plan, it studies the configuration and comes up with an execution plan. Review the plan in Cloud Shell.
+
+```
+cd ~/ts22-just-enough-terraform-for-da/00-setup/
+terraform plan
+```
+
+Study the output and see the number of resources provisioned.
+
+### 6. Provision with Terraform - modularized enabling of Google APIs and Organization Policy updates
+
+1. At the onset of the lab, we will just enable Google APIs and (optionally) update org policies. <br>
+2. The boolean for updating the org policies is in the terraform.tfvars. Google Customer engineers need to update org policies in their designated environments, but this is not applicable for everyone. Set the boolean to false in the tfvars file if you dont need to org policies in your environment.<br>
+3. Study the main.tf in the root directory
+
+Open the main.tf as show below -
+
+```
+cat ~/ts22-just-enough-terraform-for-da/00-setup/main.tf
+```
+
+You should see a bunch of variables declared and then the below. Review the difference between local.<variable> and var.<variable>.
+ 
+```
+module "setup_foundations" {
+    source = "./module_apis_and_policies"
+    project_id = var.project_id
+}
+```
+
+When the main.tf executes, it processes the variables declared and then runs the step above, and essentially iterates into the directory "module_apis_and_policies" and runs the main.tf there.
+
+Review the module .tf file-
+```
+cat ~/ts22-just-enough-terraform-for-da/00-setup/module_apis_and_policies/main.tf
+```
+It enables a bunch of APIs and depending on the boolean for updateing org policies, updates the same (or not)
+
+
+  4. Run the terraform
+```
+cd ~/ts22-just-enough-terraform-for-da/00-setup/
+terraform apply
+```
+In case your are wondering where the variables are supplied, Terraform reads them from terraform.tfvars.
+<br>
+
+Terraform will enable the APIs and Org policies with as much parallelism as possible. Notice the "sleep" statements in the main.tf in the module. The reason for this is both API enabling and Org policy updates are async and return immediately after issuing the commands behind the scenes. This can cause issues if we run the next steps and if they are dependent on API enabling for example and if they have not completed.
+  
+5. Observe the output<br>
+6. Review the execution of the declarations in the module.
+  
+  
+### 7. Provision with Terraform - Creation of user managed service account and IAM role granting
+
+
+
+
+
+
