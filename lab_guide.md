@@ -1,5 +1,5 @@
 ### 1. Clone the repo
-Run this on Cloud Shell
+1.1. Run this on Cloud Shell
 ```
 cd ~
 git clone https://github.com/anagha-google/ts22-just-enough-terraform-for-da.git
@@ -8,7 +8,7 @@ cd ts22-just-enough-terraform-for-da
 
 ### 2. Configure your preferences in the preferences script
 
-Edit the file configure.sh under 00-setup for your preferences.<br>
+2.1. Edit the file configure.sh under 00-setup for your preferences.<br>
 E.g. Update the GCP region and zone to match your preference.<br>
 
 ```
@@ -49,14 +49,14 @@ update_org_policies = "true"
 
 ### 4. Initialize Terraform
 
-Run the init command in Cloud Shell-
+4.1. Run the init command in Cloud Shell-
 ```
 cd ~/ts22-just-enough-terraform-for-da/00-setup/
 terraform init
 ```
-
 You will see some output in the console. <br>
-Check the directory to see what got created there.
+
+4.2. Check the directory to see what got created there.
 
 ```
 cd ~/ts22-just-enough-terraform-for-da/00-setup/
