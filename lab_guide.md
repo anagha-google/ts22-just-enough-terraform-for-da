@@ -224,14 +224,14 @@ c) It creates a specific firewall rule<br>
 d) It creates a reserved IP needed for Vertex AI workbench, for BYO network<br>
 e) It creates peers the network with the Google tenant network - again, needed for Vertex AI workbench, for BYO network<br>
  
-3. Terraform will incrementally run every .tf file in the root directory and any updates to teh same when an "apply" is issued. It will therefore run the network.tf<br>
-4. Observe the output in the other tab<br>
+4. Terraform will incrementally run every .tf file in the root directory and any updates to teh same when an "apply" is issued. It will therefore run the network.tf<br>
+5. Observe the output in the other tab<br>
 In the end, you should see-<br>
  ```
- Apply complete! Resources: 42 added, 0 changed, 0 destroyed.
+Apply complete! Resources: 6 added, 0 changed, 0 destroyed.
  ```
  
-5. We ran "terraform init" again as we are using some new GCP providers, everytime you introduce a new provider, you have to run the init command.
-6. Validate the provisioning by going to Cloud Console -> IAM 
+6. We ran "terraform init" again as we are using some new GCP providers, everytime you introduce a new provider, you have to run the init command.
+7. Validate the provisioning by going to Cloud Console -> Networking 
 
 
