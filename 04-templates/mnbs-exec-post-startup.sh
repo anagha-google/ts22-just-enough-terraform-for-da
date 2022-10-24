@@ -5,5 +5,5 @@
 # (Managed notebook server)
 #........................................................................
 
-gsutil cp gs://s8s_notebook_bucket-PROJECT_NBR/pyspark/*.ipynb /home/jupyter/ 
-#sudo chown jupyter:jupyter /home/jupyter/* 
+gsutil cp gs://ts22-jetfdc_notebook_bucket-YOUR_PROJECT_NBR/pyspark/*.ipynb /home/jupyter/ 
+chown jupyter:jupyter /home/jupyter/* 
