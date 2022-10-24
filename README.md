@@ -1,1 +1,1 @@
-# ts22-just-enough-terraform-for-da
+# Just enough Terraform for Data Analytics CEs
