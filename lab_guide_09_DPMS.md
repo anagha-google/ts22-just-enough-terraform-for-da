@@ -31,7 +31,7 @@ Apply complete! Resources: 1 added, 0 changed, 0 destroyed.
 
 7. Validate the provisioning by going to Cloud Console -> Dataproc
 
-8. Run through these steps in the Dataproc GUI
+8. Run through these steps in the Dataproc GUI<br>
 a) Click on "Metastore" in the left navigation panel<br>
 b) Review the deployment<br>
 
