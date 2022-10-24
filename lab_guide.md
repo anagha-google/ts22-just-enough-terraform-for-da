@@ -46,3 +46,19 @@ provision_vertex_ai = "true"
 update_org_policies = "true"
 
 ```
+
+### 4. Initialize Terraform
+
+Run the init command in Cloud Shell-
+```
+cd ~/ts22-just-enough-terraform-for-da/00-setup/
+terraform init
+```
+
+You will see some output in the console. <br>
+Check the directory to see what got created there.
+
+```
+cd ~/ts22-just-enough-terraform-for-da/00-setup/
+ls -al
+```
