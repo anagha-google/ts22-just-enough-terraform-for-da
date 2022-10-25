@@ -9,8 +9,8 @@ In this module, you will get started with Terraform.
 
 Duration: This module should take 5 minutes to complete
 
-### 1. Clone the repo
-1.1. Run this on Cloud Shell
+## 1. Clone the repo
+Run this on Cloud Shell
 ```
 cd ~
 git clone https://github.com/anagha-google/ts22-just-enough-terraform-for-da.git
@@ -19,25 +19,40 @@ cd ts22-just-enough-terraform-for-da
 
 <hr>
 
-### 2. Configure your preferences in the preferences script
+## 2. Familiarize yourself with the layout
 
-2.1. Edit the file configure.sh under 00-setup for your preferences.<br>
+```
+~/ts22-just-enough-terraform-for-da
+         00-setup
+         01-datasets
+         02-scripts
+         03-notebooks
+         04-templates
+         05-lab-guide
+         README.md
+```
+Explore the repo really quick.
+
+## 3. Configure your preferences in the preferences script
+
+Edit the file configure.sh under 00-setup for your preferences.<br>
 E.g. Update the GCP region and zone to match your preference.<br>
+This is so that you get better performance.
 
 ```
 cd ~/ts22-just-enough-terraform-for-da/00-setup
 vi configure-preferences.sh
 ```
 
-### 3. Run the preferences shell script
+## 4. Run the preferences shell script
 
-3.1. Run the command below in Cloud shell-
+4.1. Run the command below in Cloud shell-
 ```
 cd ~/ts22-just-enough-terraform-for-da/00-setup
 ./configure-preferences.sh
 ```
 
-3.2. This creates a variables file called terraform.tfvars that will be used for the rest of the lab. Lets review the file.<br>
+4.2. This creates a variables file called terraform.tfvars that will be used for the rest of the lab. Lets review the file.<br>
 Run the command below in Cloud shell-
 ```
 cat ~/ts22-just-enough-terraform-for-da/00-setup/terraform.tfvars
@@ -62,16 +77,16 @@ update_org_policies = "true"
 
 <hr>
 
-### 4. Initialize Terraform
+## 5. Initialize Terraform
 
-4.1. Run the init command in Cloud Shell-
+5.1. Run the init command in Cloud Shell-
 ```
 cd ~/ts22-just-enough-terraform-for-da/00-setup/
 terraform init
 ```
 You will see some output in the console. <br>
 
-4.2. Check the directory to see what got created there.
+5.2. Check the directory to see what got created there.
 
 ```
 cd ~/ts22-just-enough-terraform-for-da/00-setup/
@@ -92,7 +107,7 @@ drwxr-xr-x  4 admin_ admin_ 4096 Oct 24 16:49 **.terraform**
 
 <hr>
 
-### 5. Review the Terraform execution plan
+## 6. Review the Terraform execution plan
 
 Terraform Hashicorp Configuration Language (HCL) is declarative (and not imperative). When you run the plan, it studies the configuration and comes up with an execution plan. Review the plan in Cloud Shell.
 
