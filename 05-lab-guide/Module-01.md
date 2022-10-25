@@ -2,7 +2,7 @@
 
 In this module, you will get started with Terraform.
 1. You will clone the lab Git repo
-2. Declare variables ofr use in the lab
+2. Configure your preferences for the lab
 3. Run Terraform init
 4. Run Terraform plan and review the same
 5. In this module, the entities provisioned are - enabling Google APIs and updating Organization policies. 
