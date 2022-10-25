@@ -37,7 +37,9 @@ Explore the repo really quick.
 ## 3. Layout of the Terraform root directory
 ```
 ~/ts22-just-enough-terraform-for-da/00-setup
-           module_apis_and_policies
+           
+           ....module_apis_and_policies
+           ....shelf
            
            ....main.tf
            ....variables.tf
