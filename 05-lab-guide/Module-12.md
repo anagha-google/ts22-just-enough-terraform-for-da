@@ -23,7 +23,7 @@ gcloud dataproc batches submit \
   --class org.apache.spark.examples.SparkPi \
   --jars file:///usr/lib/spark/examples/jars/spark-examples.jar  \
   --subnet ${SUBNET} \
-  --service-account ${UMSA}@${PROJECT_ID}.iam.gserviceaccount.com \
+  --service-account ${UMSA_FQN} \
   --history-server-cluster projects/${PROJECT_ID}/regions/${REGION}/clusters/${HISTORY_SERVER_NAME}
 ```
 
