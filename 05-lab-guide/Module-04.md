@@ -16,9 +16,10 @@ cp shelf/network.tf .
 
 ## 2. Layout of the Terraform root directory
 ```
-~/ts22-just-enough-terraform-for-da
-         00-setup
-           module_apis_and_policies
+~/ts22-just-enough-terraform-for-da/00-setup
+
+           ....module_apis_and_policies
+           ....shelf
            
            ....main.tf
            ....variables.tf
@@ -29,12 +30,6 @@ cp shelf/network.tf .
            
            ....network.tf <--- WE ARE HERE
            
-         01-datasets
-         02-scripts
-         03-notebooks
-         04-templates
-         05-lab-guide
-         README.md
 ```
 
 
