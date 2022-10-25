@@ -33,6 +33,19 @@ cd ts22-just-enough-terraform-for-da
 ```
 Explore the repo really quick.
 
+## 3. Layout of the Terraform root directory
+```
+~/ts22-just-enough-terraform-for-da/00-setup
+           module_apis_and_policies
+           
+           ....main.tf
+           ....variables.tf
+           ....versions.tf
+           
+           ....configure-preferences.sh <--- We will run this 
+           
+```
+
 ## 3. Configure your preferences in the preferences script
 
 Edit the file configure.sh under 00-setup for your preferences.<br>
