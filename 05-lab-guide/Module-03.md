@@ -5,6 +5,9 @@ In the previous module, we enabled Google APIs and (optionally) updated Organiza
 3. Grant ourselves impresonate permissions to run as the UMSA
 4. Some GCP Data Analystics services in the lab need specific permissions granted to the underlying Google Managed Default Service accounts - we will grant those permissions. Wherever possible, we will use UMSA to provision services.
 
+**Lab Module Duration:** <br>
+< 5 minutes 
+
 
 ## 1. Copy iam.tf file to the Terraform root directory
 
@@ -17,6 +20,8 @@ cp shelf/iam.tf .
 ```
 ~/ts22-just-enough-terraform-for-da
          00-setup
+           module_apis_and_policies
+           
            ....main.tf
            ....variables.tf
            ....versions.tf
