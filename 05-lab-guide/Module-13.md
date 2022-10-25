@@ -42,61 +42,94 @@ cp shelf/bash.tf .
 ```
 ~/ts22-just-enough-terraform-for-da
          00-setup
-           ....main.tf
-           ....variables.tf
-           ....versions.tf
-           ....terraform.tfvars 
-           
-           ....iam.tf 
-           
-           
-           ..dpgce.tf <--- Terraform script
            
          01-datasets
-           ....ice_cream_sales.csv <--- Source of BigLake table
            
          02-scripts
+             ....airflow/
+             
+             ....bash/
+               hello_world_bash_sample.sh
          
          03-notebooks
-           ....pyspark/
-               ....icecream-sales-forecasting.ipynb <--- Notebook for sales forecasting on BigLake table
-         
          04-templates
          05-lab-guide
          README.md
 ```
 
+## 4. Review the bash script
+```
+cat  ~/ts22-just-enough-terraform-for-da/02-scripts/bash/hello_world_bash_sample.sh
+```
 
-## 4. Run the terraform
+Its a simple script that accepts some parameters and create a file that it persists to a GCS location submitted as an argument.
+
+```
+cat hello_world_bash_sample.sh
+#!/bin/bash
+
+#........................................................................
+# Purpose: Demonstrate how to run a bash script from Terraform
+# About:
+# The script creates a local file based on the arguments and uploads
+# the file to GCS
+#........................................................................
+
+# Variables
+PROJECT_ID=`gcloud config list --format 'value(core.project)'`
+GCP_ACCOUNT_NAME=$1
+GCP_REGION=$2
+TARGET_GCS_BUCKET_URI=$3
+
+echo "Hello ${GCP_ACCOUNT_NAME}, from ${GCP_REGION}" > dummy.txt
+gsutil cp dummy.txt $TARGET_GCS_BUCKET_URI
+```
+
+
+## 5. Run the script manually
+
+```
+PROJECT_ID=`gcloud config list --format "value(core.project)" 2>/dev/null`
+PROJECT_NBR=`gcloud projects describe $PROJECT_ID | grep projectNumber | cut -d':' -f2 |  tr -d "'" | xargs`
+REGION=us-central1 #Edit if your region is different
+UMSA_FQN="ts22-jetfdc-lab-sa@${PROJECT_ID}.iam.gserviceaccount.com"
+
+
+cd ~/ts22-just-enough-terraform-for-da/02-scripts/bash/
+./hello_world_bash_sample.sh $UMSA_FQN $REGION "gs://ts22-jetfdc-spark-bucket-${PROJECT_NBR}/dummy/"
+```
+
+Review the result-
+```
+PROJECT_ID=`gcloud config list --format "value(core.project)" 2>/dev/null`
+PROJECT_NBR=`gcloud projects describe $PROJECT_ID | grep projectNumber | cut -d':' -f2 |  tr -d "'" | xargs`
+
+gsutil cat gs://ts22-jetfdc-spark-bucket-${PROJECT_NBR}/dummy/dummy.txt
+```
+
+Author's result-
+```
+Hello ts22-jetfdc-lab-sa@ts22-lab.iam.gserviceaccount.com, from us-central1
+```
+
+
+## 6. Run the terraform
 ```
 cd ~/ts22-just-enough-terraform-for-da/00-setup/
 terraform init
 terraform apply --auto-approve
 ```
  
-## 5. Study the terraform
-In a separate Cloud Shell tab-
-```
-cat ~/ts22-just-enough-terraform-for-da/00-setup/dpgce.tf
-```
-a) It first creates a Dataproc cluster and uses a bucket specified, uses the subnet created.<br>
-b) It copies a PySpark notebook into an exact location expected by JupyterLab on DPGCE
-
-
-## 6. Study the Terraform output
+## 7. Study the Terraform output
 Observe the output.<br>
 In the end, you should see-<br>
  ```
 Apply complete! Resources: 1 added, 0 changed, 0 destroyed.
  ```
  
-## 6. Validate the provisioning by going to Cloud Console -> Dataproc
+## 8. Validate the execution of the script
 
-a) Click on "clusters" in the left navigation panel<br>
-b) The DPGCE cluster has the keyword "dpgce" in it<br>
-c) Review the features of the cluster GUI<br>
-d) Make sure JupyterLa is enabled and can be opened. We will use a notebook in the next module.<br>
-
+Results should be the same as #5 above
 
 <hr>
 
