@@ -19,7 +19,7 @@ UMSA_FQN="ts22-jetfdc-lab-sa@${PROJECT_ID}.iam.gserviceaccount.com"
 gcloud dataproc batches submit \
  --project ${PROJECT_ID} \
  --region ${REGION} \
-  spark --batch $NAME-sparkpi-${RANDOM} \
+  spark --batch sparkpi-${RANDOM} \
   --class org.apache.spark.examples.SparkPi \
   --jars file:///usr/lib/spark/examples/jars/spark-examples.jar  \
   --subnet ${SUBNET} \
@@ -29,8 +29,11 @@ gcloud dataproc batches submit \
 
 ## 2. View the results in the Dataproc Serverless Spark Batches UI
 
-
-
+1. Navigate to the Dataproc UI on the Cloud Console
+2. Click on Batches in the left navigation menu
+3. Click on the sparkpi job running
+4. Review its execution till it print the value on Pi on the console.
+This was to give you a flavor of Dataproc Serverless Spark in case you are unfamiliar.
 
 <hr>
 
