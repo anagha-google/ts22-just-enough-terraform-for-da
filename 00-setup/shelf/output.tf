@@ -1,5 +1,5 @@
 /******************************************
-20. Output important variables needed for the demo
+Output important variables needed for the demo
 ******************************************/
 
 output "PROJECT_ID" {
