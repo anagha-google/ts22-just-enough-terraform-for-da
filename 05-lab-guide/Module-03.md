@@ -30,12 +30,7 @@ cp shelf/iam.tf .
            
            ....iam.tf <---WE ARE HERE
            
-         01-datasets
-         02-scripts
-         03-notebooks
-         04-templates
-         05-lab-guide
-         README.md
+
 ```
 
 
