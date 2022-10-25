@@ -7,7 +7,8 @@ In this module, you will get started with Terraform.
 4. Run Terraform plan and review the same
 5. In this module, the entities provisioned are - enabling Google APIs and updating Organization policies. 
 
-Duration: This module should take 5 minutes to complete
+**Lab Module Duration:** <br>
+5 minutes 
 
 ## 1. Clone the repo
 Run this on Cloud Shell
