@@ -1,3 +1,14 @@
+# Module 1: Setup foundations
+
+In this module, you will get started with Terraform.
+1. You will clone the lab Git repo
+2. Declare variables ofr use in the lab
+3. Run Terraform init
+4. Run Terraform plan and review the same
+5. In this module, the entities provisioned are - enabling Google APIs and updating Organization policies. 
+
+Duration: This module should take 5 minutes to complete
+
 ### 1. Clone the repo
 1.1. Run this on Cloud Shell
 ```
@@ -93,4 +104,5 @@ terraform plan
 Study the output and see the number of resources provisioned.
 
 <hr>
-
+This concludes the module, proceed to the next module.
+<hr>
