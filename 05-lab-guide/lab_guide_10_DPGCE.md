@@ -16,7 +16,7 @@ cd ~/ts22-just-enough-terraform-for-da/00-setup/
 cp shelf/dpgce.tf .
 ```
 
-## 2. Layout of the 
+## 2. Layout of the Terraform root directory
 ```
 ~/ts22-just-enough-terraform-for-da
          00-setup
