@@ -1,10 +1,44 @@
+# Module 2: Enabling Google APIs and Updating Organization Policies
 
-### 6. Provision with Terraform - modularized enabling of Google APIs and Organization Policy updates
+1. At the onset of this lab (not just this module), we will just enable Google APIs and (optionally) update org policies. <br>
+2. We will review the Terraform scripts, commands, state
+3. And proceed to the next module
 
-1. At the onset of the lab, we will just enable Google APIs and (optionally) update org policies. <br>
-2. The boolean for updating the org policies is in the terraform.tfvars. Google Customer engineers need to update org policies in their designated environments, but this is not applicable for everyone. Set the boolean to false in the tfvars file if you dont need to org policies in your environment.<br>
-3. Study the main.tf in the root directory
+**Note:** <br>
+The boolean for updating the org policies is in the terraform.tfvars. Google Customer engineers **need to** update org policies (default=true) in their designated environments, but this is not applicable for everyone. Set the boolean to false in the tfvars file if you dont need to org policies in your environment.<br>
 
+## 1. Layout of the lab repo
+The following is the layout-<br>
+```
+~/ts22-just-enough-terraform-for-da
+         00-setup
+         01-datasets
+         02-scripts
+         03-notebooks
+         04-templates
+         05-lab-guide
+         README.md
+```
+         
+## 2. Scripts we will use/review  
+
+```
+~/ts22-just-enough-terraform-for-da
+         00-setup
+           ....main.tf<br>
+           ....variables.tf<br>
+           ....versions.tf<br>
+           ....terraform.tfvars <- Already has your preferences from running configure-preferences.sh in module 1<br>
+         01-datasets
+         02-scripts
+         03-notebooks
+         04-templates
+         05-lab-guide
+         README.md
+```
+
+## 3. Main.tf - review
+Study the main.tf in the root directory.<br>
 Open the main.tf as show below -
 
 ```
@@ -29,7 +63,7 @@ cat ~/ts22-just-enough-terraform-for-da/00-setup/module_apis_and_policies/main.t
 It enables a bunch of APIs and depending on the boolean for updateing org policies, updates the same (or not)
 
 
-4. Run the terraform
+## 4. Run the terraform
 ```
 cd ~/ts22-just-enough-terraform-for-da/00-setup/
 terraform apply --auto-approve
@@ -39,7 +73,7 @@ In case your are wondering where the variables are supplied, Terraform reads the
 
 Terraform will enable the APIs and Org policies with as much parallelism as possible. Notice the "sleep" statements in the main.tf in the module. The reason for this is both API enabling and Org policy updates are async and return immediately after issuing the commands behind the scenes. This can cause issues if we run the next steps and if they are dependent on API enabling for example and if they have not completed.
   
-5. Observe the output<br>
+## 5. Observe the output<br>
 ```
  .........
 module.setup_foundations.time_sleep.sleep_after_api_enabling: Still creating... [2m50s elapsed]
@@ -49,11 +83,11 @@ module.setup_foundations.time_sleep.sleep_after_api_enabling: Creation complete 
 Apply complete! Resources: 19 added, 0 changed, 0 destroyed.
 ```
  
-6. Review the execution of the declarations in the module.
+## 6. Review the execution of the declarations in the module.
 
 <hr>
  
-### 7. Terraform state
+## 7. Terraform state
  
 When you ran the "terraform apply" command in #6, Terraform completed the action and persisted state locally. A best practice is to use a GCS bucket for state for multiple reasons - reslience, collaboration (team updates) and more. For the purpose of simplicity, we will persist state locally.
  
@@ -78,4 +112,8 @@ Terraform has compared your real infrastructure against your configuration and f
 ```
  
 <hr>
+ 
+ This concludes the module. Please proceed to the next module.
+ 
+ <hr>
  
