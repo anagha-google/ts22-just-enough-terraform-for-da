@@ -6,12 +6,33 @@ In the previous module, we enabled Google APIs and (optionally) updated Organiza
 4. Some GCP Data Analystics services in the lab need specific permissions granted to the underlying Google Managed Default Service accounts - we will grant those permissions. Wherever possible, we will use UMSA to provision services.
 
 
-## Copy 
-1. Move the file iam.tf as shown below to the Terraform root directory
+## Copy iam.tf file to the Terraform root directory
+
 ```
 cd ~/ts22-just-enough-terraform-for-da/00-setup/
 cp shelf/iam.tf .
 ```
+
+Here is the layout of our Terraform root directory:<br>
+```
+~/ts22-just-enough-terraform-for-da
+         00-setup
+           ....main.tf
+           ....variables.tf
+           ....versions.tf
+           ....terraform.tfvars 
+           
+           ....iam.tf <---WE ARE HERE
+           
+         01-datasets
+         02-scripts
+         03-notebooks
+         04-templates
+         05-lab-guide
+         README.md
+```
+
+
 2. Open the file and read its contents
 ```
 cat ~/ts22-just-enough-terraform-for-da/00-setup/iam.tf
