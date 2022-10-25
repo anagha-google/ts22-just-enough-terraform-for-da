@@ -27,6 +27,13 @@ gcloud dataproc batches submit \
   --history-server-cluster projects/${PROJECT_ID}/regions/${REGION}/clusters/${HISTORY_SERVER_NAME}
 ```
 
+Author's immediate output:
+```
+Batch [sparkpi-15415] submitted.
+```
+
+The execution will stream logs to the console and the value of Pi eventually.
+
 ## 2. View the results in the Dataproc Serverless Spark Batches UI
 
 1. Navigate to the Dataproc UI on the Cloud Console
