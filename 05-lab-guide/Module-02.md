@@ -36,7 +36,7 @@ The following is the layout-<br>
 
            ....configure-preferences.sh
            
-           ....terraform.tfvars <- Already has your preferences from running configure-preferences.sh in module 1<br>
+           ....terraform.tfvars <- Already has your preferences from running configure-preferences.sh in module 1
 
 ```
 
