@@ -29,6 +29,9 @@ The following is the layout-<br>
 ~/ts22-just-enough-terraform-for-da/00-setup
 
            ....module_apis_and_policies
+               ....main.tf     <---- We will run this
+               ....variables.tf
+               
            ....shelf
            
            ....main.tf
@@ -37,7 +40,7 @@ The following is the layout-<br>
 
            ....configure-preferences.sh
            
-           ....terraform.tfvars <- Already has your preferences from running configure-preferences.sh in module 1
+           ....terraform.tfvars 
 
 ```
 
