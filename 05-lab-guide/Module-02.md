@@ -29,6 +29,7 @@ The following is the layout-<br>
 ~/ts22-just-enough-terraform-for-da/00-setup
 
            ....module_apis_and_policies
+           ....shelf
            
            ....main.tf
            ....variables.tf
