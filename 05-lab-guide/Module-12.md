@@ -14,6 +14,7 @@ PROJECT_NBR=`gcloud projects describe $PROJECT_ID | grep projectNumber | cut -d'
 REGION=us-central #Edit if your region is different
 SUBNET=ts22-jetfdc-snet
 HISTORY_SERVER_NAME="ts22-jetfdc-sphs-${PROJECT_NBR}"
+UMSA_FQN=""
 
 gcloud dataproc batches submit \
  --project ${PROJECT_ID} \
