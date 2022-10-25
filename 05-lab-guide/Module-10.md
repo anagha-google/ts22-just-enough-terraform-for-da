@@ -33,6 +33,7 @@ cp shelf/dpgce.tf .
            ....storage.tf 
            ....bigquery.tf
            ....phs.tf 
+           ....dpms.tf
            
            ....dpgce <--- We are here
 
