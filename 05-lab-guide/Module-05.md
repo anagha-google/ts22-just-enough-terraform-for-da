@@ -58,7 +58,7 @@ cp shelf/storage.tf .
              ....chicago-crimes-analytics.ipynb   <--- Spark notebook for chicago crimes analytics on BQ table on Dataproc Serverless/Vertex AI managed notebooks
                
            python/
-             ....google-trends-analysis.ipynb     <---  Python notebook for google trends analytics on BQ table on Vertex AI user-managed notebooks
+             ....google-trends-analysis.ipynb     <--- Python notebook for google trends analytics on BQ table on Vertex AI user-managed notebooks
              
          04-templates
          05-lab-guide
