@@ -37,7 +37,8 @@ Explore the repo really quick.
 
 Edit the file configure.sh under 00-setup for your preferences.<br>
 E.g. Update the GCP region and zone to match your preference.<br>
-This is so that you get better performance.
+This is so that you get better performance.<br>
+If you are okay with provisioning in us-central1, skip this step.
 
 ```
 cd ~/ts22-just-enough-terraform-for-da/00-setup
