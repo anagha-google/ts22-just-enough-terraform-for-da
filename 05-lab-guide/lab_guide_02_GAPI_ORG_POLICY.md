@@ -21,18 +21,21 @@ The following is the layout-<br>
 ```
          
 ## 2. Scripts we will use/review  
-~/ts22-just-enough-terraform-for-da<br>
-         00-setup<br>
+
+```
+~/ts22-just-enough-terraform-for-da
+         00-setup
            ....main.tf<br>
            ....variables.tf<br>
            ....versions.tf<br>
            ....terraform.tfvars <- Already has your preferences from running configure-preferences.sh in module 1<br>
-         01-datasets<br>
-         02-scripts<br>
-         03-notebooks<br>
-         04-templates<br>
-         05-lab-guide<br>
-
+         01-datasets
+         02-scripts
+         03-notebooks
+         04-templates
+         05-lab-guide
+         README.md
+```
 
 ## 3. Main.tf - review
 Study the main.tf in the root directory.<br>
