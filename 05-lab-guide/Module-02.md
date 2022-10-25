@@ -30,9 +30,9 @@ The following is the layout-<br>
 
            module_apis_and_policies
            
-           ....main.tf<br>
-           ....variables.tf<br>
-           ....versions.tf<br>
+           ....main.tf
+           ....variables.tf
+           ....versions.tf
 
            ....configure-preferences.sh
            
