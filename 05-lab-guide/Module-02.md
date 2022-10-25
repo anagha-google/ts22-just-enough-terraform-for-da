@@ -23,25 +23,21 @@ The following is the layout-<br>
          README.md
 ```
          
-## 2. Scripts we will use/review  
+## 2. Scripts we will use/review in the Terraform root directory  
 
 ```
-~/ts22-just-enough-terraform-for-da
-         00-setup
+~/ts22-just-enough-terraform-for-da/00-setup
+
            module_apis_and_policies
            
            ....main.tf<br>
            ....variables.tf<br>
            ....versions.tf<br>
+
+           ....configure-preferences.sh
            
            ....terraform.tfvars <- Already has your preferences from running configure-preferences.sh in module 1<br>
-           
-         01-datasets
-         02-scripts
-         03-notebooks
-         04-templates
-         05-lab-guide
-         README.md
+
 ```
 
 ## 3. Main.tf - review
