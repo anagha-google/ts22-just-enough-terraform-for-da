@@ -1,22 +1,52 @@
 
-### 9. Networking: Creation of VPC, Subnet, Firewall rule(s), reservered IP, VPC peering, Router and NAT
+# Module 4: Create Network, Subnet, Firewall rule(s), Reserved IP addreess, VPC peering, Router and NAT
  
 In this section, we will provision networking entities needed for VPC native services/those that support BYO VPC - such as Cloud Dataproc, Cloud Composer, Cloud Dataflow, Vertex AI Workbench. We will create a router and NAT to allow download of Python packages from PyPi<br>
  
-1. Move the file network.tf as shown below to the Terraform root directory<br>
+**Lab Module Duration:**
+5 minutes 
+
+## 1. Copy the TF file for networking into the Terraform root directory
+Copy the file network.tf as shown below to the Terraform root directory
+
 ```
 cd ~/ts22-just-enough-terraform-for-da/00-setup/
 cp shelf/network.tf .
 ```
 
-2. Run the terraform<br> 
+## 2. Layout of the Terraform root directory
+```
+~/ts22-just-enough-terraform-for-da
+         00-setup
+           module_apis_and_policies
+           
+           ....main.tf
+           ....variables.tf
+           ....versions.tf
+           ....terraform.tfvars 
+           
+           ....iam.tf 
+           
+           ....network.tf <--- WE ARE HERE
+           
+         01-datasets
+         02-scripts
+         03-notebooks
+         04-templates
+         05-lab-guide
+         README.md
+```
+
+
+## 2. Run the terraform
 ```
 cd ~/ts22-just-enough-terraform-for-da/00-setup/
 terraform init
 terraform apply --auto-approve
 ```
  
-3. While its running, in a separate Cloud Shell tab, open the file and read its contents<br>
+## 3. Review the Terraform script
+While its running, in a separate Cloud Shell tab, open the file and read its contents<br>
 ```
 cat ~/ts22-just-enough-terraform-for-da/00-setup/network.tf
 ```
@@ -26,17 +56,24 @@ c) It creates a specific firewall rule<br>
 d) It creates a reserved IP needed for Vertex AI workbench, for BYO network<br>
 e) It creates peers the network with the Google tenant network - again, needed for Vertex AI workbench, for BYO network<br>
 f) It then creates a router<br>
-g) And a NAT to allow downloads from the internet
- 
-4. Terraform will incrementally run every .tf file in the root directory and any updates to teh same when an "apply" is issued. It will therefore run the network.tf<br>
+g) And a NAT to allow downloads from the internet<br>
+
+4. Terraform will incrementally run every .tf file in the root directory and any updates to the same when an "apply" is issued. It will therefore run the network.tf<br>
 5. Observe the output in the other tab<br>
 In the end, you should see-<br>
  ```
 Apply complete! Resources: 6 added, 0 changed, 0 destroyed.
  ```
+
+## 4. Again, why "terraform init"?
+We ran "terraform init" again as we are using some new GCP providers, everytime you introduce a new provider, you have to run the init command.
+
+## 5. Validate 
+Validate the provisioning by going to Cloud Console -> Networking 
  
-6. We ran "terraform init" again as we are using some new GCP providers, everytime you introduce a new provider, you have to run the init command.
-7. Validate the provisioning by going to Cloud Console -> Networking 
- 
+<hr>
+
+This concludes the module. Proceed to the next module.
+
 <hr>
  
