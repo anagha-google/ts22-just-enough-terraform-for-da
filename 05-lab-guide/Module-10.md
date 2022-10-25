@@ -18,24 +18,24 @@ cp shelf/dpgce.tf .
 
 ## 2. Layout of the Terraform root directory
 ```
-~/ts22-just-enough-terraform-for-da
-         00-setup
+~/ts22-just-enough-terraform-for-da/00-setup
+
+           ....module_apis_and_policies
+           ....shelf
+
            ....main.tf
            ....variables.tf
            ....versions.tf
            ....terraform.tfvars 
            
-           ....iam.tf 
+           ....iam.tf
+           ....network.tf    
+           ....storage.tf 
+           ....bigquery.tf
+           ....phs.tf 
            
-           
-           ..dpgce.tf <--- WE ARE HERE
-           
-         01-datasets
-         02-scripts
-         03-notebooks
-         04-templates
-         05-lab-guide
-         README.md
+           ....dpgce <--- We are here
+
 ```
 
 ## 3. Noteworthy artifacts
@@ -51,7 +51,7 @@ cp shelf/dpgce.tf .
            ....iam.tf 
            
            
-           ..dpgce.tf <--- WE ARE HERE
+           ..dpgce.tf <--- Terraform script
            
          01-datasets
            ....ice_cream_sales.csv <--- Source of BigLake table
