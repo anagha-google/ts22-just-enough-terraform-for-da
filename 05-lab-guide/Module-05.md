@@ -32,48 +32,14 @@ cp shelf/storage.tf .
            
 ```
 
-## 3. Noteworthy artifacts
-
-```
-~/ts22-just-enough-terraform-for-da
-
-         00-setup
-
-         01-datasets/
-           ....ice_cream_sales.csv <--- Source of BigLake table
-           ....us_states.csv <---- Source of BigQuery managed table
-           
-         02-scripts/
-           airflow/
-              ....pipeline.py
-                           
-           bash/
-             ....hello_world_bash_sample.sh
-             
-           
-         
-         03-notebooks
-           pyspark/
-             ....icecream-sales-forecasting.ipynb <--- Spark notebook for sales forecasting on BigLake table on Dataproc GCE
-             ....chicago-crimes-analytics.ipynb   <--- Spark notebook for chicago crimes analytics on BQ table on Dataproc Serverless/Vertex AI managed notebooks
-               
-           python/
-             ....google-trends-analysis.ipynb     <--- Python notebook for google trends analytics on BQ table on Vertex AI user-managed notebooks
-             
-         04-templates
-         05-lab-guide
-         README.md
-```
-
-
-## 4. Run the terraform
+## 3. Run the terraform
 ```
 cd ~/ts22-just-enough-terraform-for-da/00-setup/
 terraform init
 terraform apply --auto-approve
 ```
  
-## 5. Study the terraform
+## 4. Study the terraform
 In a separate Cloud Shell tab-
 ```
 cat ~/ts22-just-enough-terraform-for-da/00-setup/storage.tf
@@ -81,7 +47,7 @@ cat ~/ts22-just-enough-terraform-for-da/00-setup/storage.tf
 It merely greates regional buckets.
 
 
-## 6. Study the Terraform output
+## 5. Study the Terraform output
 Observe the output.<br>
 In the end, you should see-<br>
  ```
@@ -89,11 +55,13 @@ Apply complete! Resources: 6 added, 0 changed, 0 destroyed.
  ```
  
 ## 6. Validate the provisioning by going to Cloud Console -> Cloud Storage
-
-Here is the author's listing of buckets created-
+Alternately, you can run on CLI-
  ```
 gsutil ls
- 
+```
+
+Here is the author's listing of buckets created-
+ ``` 
 gs://ts22-jetfdc-spark-bucket-1053039281529/
 gs://ts22-jetfdc-sphs-1053039281529/
 gs://ts22-jetfdc_code_bucket-1053039281529/
