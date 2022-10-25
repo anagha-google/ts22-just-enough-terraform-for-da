@@ -1,5 +1,12 @@
-### 8. IAM: Creation of user managed service account and IAM role granting
+# Module 3: Creation of user managed service account and IAM role granting
+In the previous module, we enabled Google APIs and (optionally) updated Organization policies. In this module, we will - 
+1. Create a user managed service account (UMSA)
+2. Grant this UMSA, requisite permissions to GCP services ins cope for the lab
+3. Grant ourselves impresonate permissions to run as the UMSA
+4. Some GCP Data Analystics services in the lab need specific permissions granted to the underlying Google Managed Default Service accounts - we will grant those permissions. Wherever possible, we will use UMSA to provision services.
 
+
+## Copy 
 1. Move the file iam.tf as shown below to the Terraform root directory
 ```
 cd ~/ts22-just-enough-terraform-for-da/00-setup/
