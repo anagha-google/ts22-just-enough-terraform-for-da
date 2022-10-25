@@ -1,4 +1,4 @@
-# Module 3: Creation of user managed service account and IAM role granting
+# Module 3: Create user managed service account and grant IAM roles
 In the previous module, we enabled Google APIs and (optionally) updated Organization policies. In this module, we will - 
 1. Create a user managed service account (UMSA)
 2. Grant this UMSA, requisite permissions to GCP services ins cope for the lab
