@@ -11,7 +11,7 @@ This is an optional module and merely serves as smoke-testing for Dataproc Servr
 ```
 PROJECT_ID=`gcloud config list --format "value(core.project)" 2>/dev/null`
 PROJECT_NBR=`gcloud projects describe $PROJECT_ID | grep projectNumber | cut -d':' -f2 |  tr -d "'" | xargs`
-REGION=us-central #Edit if your region is different
+REGION=us-central1 #Edit if your region is different
 SUBNET=ts22-jetfdc-snet
 HISTORY_SERVER_NAME="ts22-jetfdc-sphs-${PROJECT_NBR}"
 UMSA_FQN="ts22-jetfdc-lab-sa@${PROJECT_ID}.iam.gserviceaccount.com"
