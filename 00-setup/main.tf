@@ -19,53 +19,52 @@ Local variables declaration
  *****************************************/
 
 locals {
+resource_prefix             = "ts22-jetfdc"
+
 project_id                  = "${var.project_id}"
 project_nbr                 = "${var.project_number}"
 admin_upn_fqn               = "${var.gcp_account_name}"
 location                    = "${var.gcp_region}"
 zone                        = "${var.gcp_zone}"
 location_multi              = "${var.gcp_multi_region}"
-umsa                        = "s8s-lab-sa"
+
+umsa                        = "${local.resource_prefix}-lab-sa"
 umsa_fqn                    = "${local.umsa}@${local.project_id}.iam.gserviceaccount.com"
-s8s_spark_bucket            = "s8s-spark-bucket-${local.project_nbr}"
-s8s_spark_bucket_fqn        = "gs://s8s-spark-${local.project_nbr}"
-s8s_spark_sphs_nm           = "s8s-sphs-${local.project_nbr}"
-s8s_spark_sphs_bucket       = "s8s-sphs-${local.project_nbr}"
-s8s_spark_sphs_bucket_fqn   = "gs://s8s-sphs-${local.project_nbr}"
-vpc_nm                      = "s8s-vpc-${local.project_nbr}"
-spark_subnet_nm             = "spark-snet"
-spark_subnet_cidr           = "10.0.0.0/16"
-psa_ip_length               = 16
-s8s_data_bucket             = "s8s_data_bucket-${local.project_nbr}"
-s8s_code_bucket             = "s8s_code_bucket-${local.project_nbr}"
-s8s_notebook_bucket         = "s8s_notebook_bucket-${local.project_nbr}"
-s8s_model_bucket            = "s8s_model_bucket-${local.project_nbr}"
-s8s_bundle_bucket           = "s8s_bundle_bucket-${local.project_nbr}"
-s8s_pipeline_bucket         = "s8s_pipeline_bucket-${local.project_nbr}"
-s8s_metrics_bucket          = "s8s_metrics_bucket-${local.project_nbr}"
-s8s_functions_bucket        = "s8s_functions_bucket-${local.project_nbr}"
-s8s_artifact_repository_nm  = "s8s-spark-${local.project_nbr}"
-bq_datamart_ds              = "customer_churn_ds"
-bq_datamart_churn_score_table    = "customer_churn_score_data"
-bq_datamart_churn_train_table    = "customer_churn_train_data"
-bq_datamart_sample_table    = "plantboundaries"
-umnb_server_machine_type    = "e2-medium"
-umnb_server_nm              = "s8s-spark-ml-pipelines-nb-server"
-mnb_server_machine_type     = "n1-standard-4"
-mnb_server_nm               = "s8s-spark-ml-interactive-nb-server"
 CC_GMSA_FQN                 = "service-${local.project_nbr}@cloudcomposer-accounts.iam.gserviceaccount.com"
 GCE_GMSA_FQN                = "${local.project_nbr}-compute@developer.gserviceaccount.com"
 CLOUD_COMPOSER2_IMG_VERSION = "${var.cloud_composer_image_version}"
-SPARK_CONTAINER_IMG_TAG     = "${var.spark_container_image_tag}"
-dpms_nm                     = "s8s-dpms-${local.project_nbr}"
+
+spark_bucket                = "${local.resource_prefix}-spark-bucket-${local.project_nbr}"
+spark_bucket_fqn            = "gs://${local.resource_prefix}-spark-${local.project_nbr}"
+sphs_nm                     = "${local.resource_prefix}-sphs-${local.project_nbr}"
+sphs_bucket                 = "${local.resource_prefix}-sphs-${local.project_nbr}"
+sphs_bucket_fqn             = "gs://${local.resource_prefix}-sphs-${local.project_nbr}"
+data_bucket                 = "${local.resource_prefix}_data_bucket-${local.project_nbr}"
+code_bucket                 = "${local.resource_prefix}_code_bucket-${local.project_nbr}"
+notebook_bucket             = "${local.resource_prefix}_notebook_bucket-${local.project_nbr}"
+dataproc_bucket             = "${local.resource_prefix}_dataproc_bucket-${local.project_nbr}"
+
+vpc_nm                      = "${local.resource_prefix}-vpc-${local.project_nbr}"
+subnet_nm                   = "${local.resource_prefix}-snet"
+subnet_cidr                 = "10.0.0.0/16"
+psa_ip_length               = 16
+nat_router_name             = "${local.resource_prefix}-nat"
+
+bq_datamart_ds              = "ts22_tf_lab_ds"
 bq_connector_jar_gcs_uri    = "${var.bq_connector_jar_gcs_uri}"
-cloud_scheduler_timezone    = "${var.cloud_scheduler_time_zone}"
+bq_connection               = "external_gcs"
+
+umnb_server_machine_type    = "e2-medium"
+umnb_server_nm              = "${local.resource_prefix}-notebook-server"
+mnb_server_machine_type     = "n1-standard-4"
+mnb_server_nm               = "${local.resource_prefix}-managed-notebook-server"
+
+dpms_nm                     = "${local.resource_prefix}-dpms-${local.project_nbr}"
+dpgce_nm                    = "${local.resource_prefix}-dpgce-${local.project_nbr}"
+
 }
 
-/******************************************
-DONE
-******************************************/
-module "setup_project" {
-    source = "./module-project"
+module "setup_foundations" {
+    source = "./module_apis_and_policies"
     project_id = var.project_id
 }
