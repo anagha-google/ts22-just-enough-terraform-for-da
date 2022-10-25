@@ -28,7 +28,7 @@ The following is the layout-<br>
 ```
 ~/ts22-just-enough-terraform-for-da/00-setup
 
-           module_apis_and_policies
+           ....module_apis_and_policies
            
            ....main.tf
            ....variables.tf
