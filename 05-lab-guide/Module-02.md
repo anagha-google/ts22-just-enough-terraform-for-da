@@ -1,4 +1,4 @@
-# Module 2: Enabling Google APIs and Updating Organization Policies
+# Module 2: Enable Google APIs and update Organization Policies
 
 1. At the onset of this lab (not just this module), we will just enable Google APIs and (optionally) update org policies. <br>
 2. We will review the Terraform scripts, commands, state
