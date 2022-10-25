@@ -8,28 +8,28 @@
 The boolean for updating the org policies is in the terraform.tfvars. Google Customer engineers **need to** update org policies (default=true) in their designated environments, but this is not applicable for everyone. Set the boolean to false in the tfvars file if you dont need to org policies in your environment.<br>
 
 ## 1. Layout of the lab repo
-The following is the layout-
-~/ts22-just-enough-terraform-for-da
-         00-setup
-         01-datasets
-         02-scripts
-         03-notebooks
-         04-templates
-         05-lab-guide
-         README.md
+The following is the layout-<br>
+~/ts22-just-enough-terraform-for-da<br>
+         00-setup<br>
+         01-datasets<br>
+         02-scripts<br>
+         03-notebooks<br>
+         04-templates<br>
+         05-lab-guide<br>
+         README.md<br>
          
 ## 2. Scripts we will use/review  
-~/ts22-just-enough-terraform-for-da
-         00-setup
-           ....main.tf
-           ....variables.tf
-           ....versions.tf
-           ....terraform.tfvars <- Already has your preferences from running configure-preferences.sh in module 1
-         01-datasets
-         02-scripts
-         03-notebooks
-         04-templates
-         05-lab-guide
+~/ts22-just-enough-terraform-for-da<br>
+         00-setup<br>
+           ....main.tf<br>
+           ....variables.tf<br>
+           ....versions.tf<br>
+           ....terraform.tfvars <- Already has your preferences from running configure-preferences.sh in module 1<br>
+         01-datasets<br>
+         02-scripts<br>
+         03-notebooks<br>
+         04-templates<br>
+         05-lab-guide<br>
 
 
 ## 3. Main.tf - review
