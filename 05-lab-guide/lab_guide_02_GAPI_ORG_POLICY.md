@@ -9,14 +9,16 @@ The boolean for updating the org policies is in the terraform.tfvars. Google Cus
 
 ## 1. Layout of the lab repo
 The following is the layout-<br>
-~/ts22-just-enough-terraform-for-da<br>
-         00-setup<br>
-         01-datasets<br>
-         02-scripts<br>
-         03-notebooks<br>
-         04-templates<br>
-         05-lab-guide<br>
-         README.md<br>
+```
+~/ts22-just-enough-terraform-for-da
+         00-setup
+         01-datasets
+         02-scripts
+         03-notebooks
+         04-templates
+         05-lab-guide
+         README.md
+```
          
 ## 2. Scripts we will use/review  
 ~/ts22-just-enough-terraform-for-da<br>
