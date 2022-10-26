@@ -23,7 +23,7 @@ This is not a challenge lab
 <hr>
 
 ## 5. Data Analytics Services Scope
-The [modules listing](README.md#10-lab-modules---get-started) below highlights services in scope. Its not all-encompassing. Contributions are welcome.
+The [modules listing](README.md#10-get-started-with-the-lab) below highlights services in scope. Its not all-encompassing. Contributions are welcome.
 
 <hr>
 
@@ -54,9 +54,9 @@ Production hardened Terraform Blueprints: https://github.com/GoogleCloudPlatform
 
 <hr>
 
-## 10. Lab Modules - get started
+## 10. Get started with the lab
 
-The lab modules listed in the next section are best run sequentially to avoid dependency issues. 
+The lab modules listed are best run sequentially to avoid dependency issues. 
 
 | # | Module | 
 | -- | :--- | 
