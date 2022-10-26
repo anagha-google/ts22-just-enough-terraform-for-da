@@ -72,7 +72,7 @@ gs://ts22-jetfdc_notebook_bucket-1053039281529/
 
 <hr>
 
-This concludes the module. Proceed to the next module.
+ This concludes the module. Please proceed to the [next module](Module-06.md).
 
 <hr>
  
