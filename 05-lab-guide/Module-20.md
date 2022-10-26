@@ -2,9 +2,11 @@
 
 You can run the who lab in one shot if all the .tf files in the shelf directory of 00-setup were in the Terraform root directory. Terraform will review the files and do the necessary dependency management as specified in the individual GCP service specific deployment declaration.
 
+**Note**: You need a project pre-created for this module. 
+
 <hr>
 
-## 1. Clone this repo in Cloud Shell
+## 1. Clone this repo in Cloud Shell scoped to the project you created for the lab
 
 ```
 cd ~
