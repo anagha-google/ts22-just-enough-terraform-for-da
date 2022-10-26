@@ -102,6 +102,6 @@ d) Make sure JupyterLa is enabled and can be opened. We will use a notebook in t
 
 <hr>
 
-This concludes the module. Proceed to the next module.
+ This concludes the module. Please proceed to the [next module](Module-11.md).
 
 <hr>
