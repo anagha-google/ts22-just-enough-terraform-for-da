@@ -122,11 +122,7 @@ terraform apply --auto-approve
 ```
  
 ## 7. Study the Terraform output
-Observe the output.<br>
-In the end, you should see-<br>
- ```
-Apply complete! Resources: 5 added, 1 changed, 3 destroyed.
- ```
+Observe the output and watch for errors.
  
 ## 8. Validate the execution of the script
 
