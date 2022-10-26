@@ -57,7 +57,7 @@ g) And a NAT to allow downloads from the internet<br>
 5. Observe the output in the other tab<br>
 In the end, you should see-<br>
  ```
-Apply complete! Resources: 6 added, 0 changed, 0 destroyed.
+Apply complete! Resources: 8 added, 0 changed, 0 destroyed.
  ```
 
 ## 4. Again, why "terraform init"?
