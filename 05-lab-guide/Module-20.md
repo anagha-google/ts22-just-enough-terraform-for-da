@@ -25,11 +25,15 @@ cp -r shelf/* .
 <hr>
 
 ## 3. Edit the preferences script & run it
+
+3.1. Edit to customize your region. No change is needed if you are okay with running in us-central region.
+
 ```
 cd ~/ts22-just-enough-terraform-for-da/00-setup
 vi configure-preferences.sh
 ```
-Make changes to your GCP region as needed & run it-
+
+3.2. Run it-
 ```
 cd ~/ts22-just-enough-terraform-for-da/00-setup
 ./configure-preferences.sh
