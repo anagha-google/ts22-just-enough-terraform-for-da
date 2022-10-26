@@ -23,7 +23,7 @@ This is not a challenge lab
 <hr>
 
 ## 5. Data Analytics Services Scope
-The modules listing below highlights services in scope. Its not all-encompassing. Contributions are welcome.
+The [modules listing](README.md#10-lab-modules---get-started) below highlights services in scope. Its not all-encompassing. Contributions are welcome.
 
 <hr>
 
