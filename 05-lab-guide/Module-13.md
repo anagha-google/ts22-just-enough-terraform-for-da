@@ -96,6 +96,7 @@ UMSA_FQN="ts22-jetfdc-lab-sa@${PROJECT_ID}.iam.gserviceaccount.com"
 
 
 cd ~/ts22-just-enough-terraform-for-da/02-scripts/bash/
+chmod +x hello_world_bash_sample.sh
 ./hello_world_bash_sample.sh $UMSA_FQN $REGION "gs://ts22-jetfdc-spark-bucket-${PROJECT_NBR}/dummy/"
 ```
 
