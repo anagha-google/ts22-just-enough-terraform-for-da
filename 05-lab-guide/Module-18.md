@@ -98,6 +98,6 @@ Takes ~25 minute to provision. Run through these steps post provisioning-
 
 <hr>
 
-This concludes the lab. Proceed to the next module where you will learn to destroy the environment.
+This concludes the lab. Please proceed to the [next module](Module-19.md) where you will learn to destroy the environment.
 
 <hr>
