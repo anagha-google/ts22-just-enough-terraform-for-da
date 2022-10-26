@@ -1,4 +1,4 @@
-# Module 16: (Optional) Run a Python Notebook on the User Managed Notebook instance on Vertex AI Workbench 
+# Module 16: (Optional) Run a Python Notebook (Google Trends Analysis) on the User Managed Notebook instance on Vertex AI Workbench 
 
 This module is not Terraform related. In module 15, we created a User Managed Notebook instance on Vertex AI Workbench and uploaded a Google Trends notebook to the instance as part of a post startup script. In this module, we will just run the notebook. This module is entirely optional.
 
@@ -15,5 +15,8 @@ This module is not Terraform related. In module 15, we created a User Managed No
 6. Run the notebook and analyze trends.
 
 <hr>
-This concludes the module. Proceed to the next module.
+
+ This concludes the module. Please proceed to the [next module](Module-17.md).
+
+
 <hr>
