@@ -103,19 +103,20 @@ Go to GCS and look up the files - they should not have the keyword 'YOUR_PROJECT
 
 <br>
 8.1. Post Startup Script for Managed Notebook Instance:
+
 ```
 PROJECT_ID=`gcloud config list --format "value(core.project)" 2>/dev/null`
 PROJECT_NBR=`gcloud projects describe $PROJECT_ID | grep projectNumber | cut -d':' -f2 |  tr -d "'" | xargs`
-
 gsutil cat gs://ts22-jetfdc_notebook_bucket-${PROJECT_NBR}/pyspark/mnbs-exec-post-startup.sh
 ```
 
 <br>
+
 8.2. Post Startup Script for User Managed Notebook Instance:
+
 ```
 PROJECT_ID=`gcloud config list --format "value(core.project)" 2>/dev/null`
 PROJECT_NBR=`gcloud projects describe $PROJECT_ID | grep projectNumber | cut -d':' -f2 |  tr -d "'" | xargs`
-
 gsutil cat gs://ts22-jetfdc_notebook_bucket-${PROJECT_NBR}/pyspark/umnbs-exec-post-startup.sh
 ```
 
