@@ -119,6 +119,6 @@ gsutil cat gs://ts22-jetfdc_code_bucket-${PROJECT_NBR}/bash/umnbs-exec-post-star
 
 <hr>
 
-This concludes the module. Proceed to the next module.
+ This concludes the module. Please proceed to the [next module](Module-15.md).
 
 <hr>
