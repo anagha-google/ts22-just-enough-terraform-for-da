@@ -78,5 +78,13 @@ resource "google_storage_bucket_object" "copy_notebook_to_dpgce_bucket" {
   ]
 }
 
+resource "time_sleep" "sleep_after_creating_dpgce" {
+  create_duration = "120s"
+  depends_on = [
+   google_storage_bucket_object.copy_notebook_to_dpgce_bucket
+
+  ]
+}
+
 
 
