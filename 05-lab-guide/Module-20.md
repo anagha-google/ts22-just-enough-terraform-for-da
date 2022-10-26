@@ -4,6 +4,16 @@ You can run the who lab in one shot if all the .tf files in the shelf directory 
 
 <hr>
 
+## 0. Clone this repo in Cloud Shell
+
+```
+cd ~
+git clone https://github.com/anagha-google/ts22-just-enough-terraform-for-da.git
+cd ts22-just-enough-terraform-for-da
+```
+
+<hr>
+
 ## 1. Copy the .tf in shelf/ to the Terraform root directory
 
 Run the below in cloud shell
