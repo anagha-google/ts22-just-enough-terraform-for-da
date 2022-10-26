@@ -1,6 +1,8 @@
 # Module 17: (Optional) Run a PySpark Notebook (Chicago Crimes Analysis) on the Managed Notebook instance on Vertex AI Workbench 
 
-THIS IS A PREVIEW FEATURE (OCT 2022) AND NEEDS ALLOW_LISTING.<br><br>
+
+
+## THIS IS A PREVIEW FEATURE (OCT 2022) AND NEEDS ALLOW_LISTING.<br><br>
 
 This module is not Terraform related. In module 15, we created a Managed Notebook instance on Vertex AI Workbench and uploaded a Chicago Crimes notebook to the instance as part of a post startup script. In this module, we will just run the notebook to learn how to run Dataproc Serverless Spark on Managed Notebooks. This module is entirely optional.
 
