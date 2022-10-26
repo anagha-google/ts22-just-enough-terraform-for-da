@@ -54,9 +54,9 @@ Production hardened Terraform Blueprints: https://github.com/GoogleCloudPlatform
 
 <hr>
 
-## 10. Lab Modules - get started
+## 10. Get started with the lab
 
-The lab modules listed in the next section are best run sequentially to avoid dependency issues. 
+The lab modules listed are best run sequentially to avoid dependency issues. 
 
 | # | Module | 
 | -- | :--- | 
