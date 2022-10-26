@@ -1,5 +1,5 @@
-# Module 13: Customize a file
-Often we need to custmize files before running them, based on variables unique to the dpeloyment. In this module, we will customize our Vertex AI Workbench notebook instance startup scripts at Terraform runtime. <br>
+# Module 13: Customize a file with Terraform
+Often we need to customize files before running them, based on variables unique to the deployment. In this module, we will customize our Vertex AI Workbench notebook instance post startup scripts at Terraform runtime. <br>
 
 **Lab Module Duration:** <br>
 5 minutes or less 
@@ -9,7 +9,7 @@ Often we need to custmize files before running them, based on variables unique t
 Copy the file customize_scripts.tf as shown below to the Terraform root directory<br>
 ```
 cd ~/ts22-just-enough-terraform-for-da/00-setup/
-cp shelf/customize_scripts.tf .
+cp shelf/customize-scripts.tf .
 ```
 
 ## 2. Layout of the Terraform root directory
@@ -33,7 +33,7 @@ cp shelf/customize_scripts.tf .
            ....dpgce
            ....bash.tf
            
-           ....customize_scripts.tf<--- We are here
+           ....customize-scripts.tf<--- We are here
 ```
 
 ## 3. Noteworthy artifacts
@@ -53,12 +53,14 @@ cp shelf/customize_scripts.tf .
          README.md
 ```
 
-## 4. Review the one of the bash scripts
+## 4. Review the each of the bash scripts
+
+4.1. Review the script - mnbs-exec-post-startup.sh
 ```
 cat  ~/ts22-just-enough-terraform-for-da/04-templates/mnbs-exec-post-startup.sh
 ```
 
-Its a simple script that accepts copies GCS directory contents to a directory and changes permissions.
+Its a simple script that copies GCS directory contents to a a Workbench notebook instance directory and changes permissions.
 ```
 #........................................................................
 # Purpose: Copy existing notebooks to Workbench server Jupyter home dir
@@ -69,9 +71,17 @@ gsutil cp gs://ts22-jetfdc_notebook_bucket-YOUR_PROJECT_NBR/pyspark/*.ipynb /hom
 chown jupyter:jupyter /home/jupyter/*
 ```
 
-## 5. Review customize_scripts.tf
+4.2. Review the script - umnbs-exec-post-startup.sh
+
+```
+cat  ~/ts22-just-enough-terraform-for-da/04-templates/umnbs-exec-post-startup.sh
+```
+
+Its also a simple script that copies GCS directory contents to a a Workbench notebook instance directory and changes permissions.
+
+## 5. Review customize-scripts.tf
 1. It merely uses "sed" to replace "YOUR_PROJECT_NBR" to an actual project number based off of the var.project_nbr
-2. And then copies the file to GCS
+2. And then copies the file to GCS code bucket, bash directory
 
 ## 6. Run the terraform
 ```
@@ -89,7 +99,25 @@ Apply complete! Resources: 2 added, 0 changed, 0 destroyed.
  
 ## 8. Validate the execution of the script
 
-Go to GCS and look up the files.
+Go to GCS and look up the files - they should not have the keyword 'YOUR_PROJECT_NUMBER' in them, and should have your actual project number substituted.
+
+<br>
+8.1. Post Startup Script for Managed Notebook Instance:
+```
+PROJECT_ID=`gcloud config list --format "value(core.project)" 2>/dev/null`
+PROJECT_NBR=`gcloud projects describe $PROJECT_ID | grep projectNumber | cut -d':' -f2 |  tr -d "'" | xargs`
+
+gsutil cat gs://ts22-jetfdc_notebook_bucket-${PROJECT_NBR}/pyspark/mnbs-exec-post-startup.sh
+```
+
+<br>
+8.2. Post Startup Script for User Managed Notebook Instance:
+```
+PROJECT_ID=`gcloud config list --format "value(core.project)" 2>/dev/null`
+PROJECT_NBR=`gcloud projects describe $PROJECT_ID | grep projectNumber | cut -d':' -f2 |  tr -d "'" | xargs`
+
+gsutil cat gs://ts22-jetfdc_notebook_bucket-${PROJECT_NBR}/pyspark/umnbs-exec-post-startup.sh
+```
 
 
 <hr>
