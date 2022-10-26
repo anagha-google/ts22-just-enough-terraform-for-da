@@ -44,6 +44,6 @@ This was to give you a flavor of Dataproc Serverless Spark in case you are unfam
 
 <hr>
 
-This concludes the module. Proceed to the next module.
+ This concludes the module. Please proceed to the [next module](Module-13.md).
 
 <hr>
