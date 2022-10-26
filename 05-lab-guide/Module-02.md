@@ -120,7 +120,7 @@ Terraform has compared your real infrastructure against your configuration and f
  
 <hr>
  
- This concludes the module. Please proceed to the next module.
+ This concludes the module. Please proceed to the [next module](Module-03.md).
  
  <hr>
  
