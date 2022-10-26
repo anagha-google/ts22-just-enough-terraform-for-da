@@ -135,6 +135,8 @@ terraform plan
 
 Study the output and see the number of resources provisioned.
 
-<hr>
+<hr> 
+
 This concludes the module, proceed to the [next module](05-lab-guide/Module-02.md).
+
 <hr>
