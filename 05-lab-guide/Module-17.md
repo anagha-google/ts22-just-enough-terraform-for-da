@@ -1,4 +1,4 @@
-# Module 17: (Optional) Run a PySpark Notebook on the Managed Notebook instance on Vertex AI Workbench \
+# Module 17: (Optional) Run a PySpark Notebook on the Managed Notebook instance on Vertex AI Workbench 
 
 THIS IS A PREVIEW FEATURE (OCT 2022) AND NEEDS ALLOW_LISTING.<br><br>
 
