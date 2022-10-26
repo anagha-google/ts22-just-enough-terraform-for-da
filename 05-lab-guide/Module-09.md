@@ -73,6 +73,6 @@ b) Review the deployment<br>
 
 
 <hr>
-This concludes this module. Please proceed to the next module.
+ This concludes the module. Please proceed to the [next module](Module-10.md).
 
 <hr>
