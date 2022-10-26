@@ -70,7 +70,8 @@ Go to Cloud Console -> IAM and make sure everything got created, in comparison t
  
 <hr>
 
-This concludes the module. Proceed to the next module.
+
+ This concludes the module. Please proceed to the [next module](Module-04.md).
 
 <hr>
 
