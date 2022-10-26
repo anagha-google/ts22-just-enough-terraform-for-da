@@ -68,7 +68,7 @@ Validate the provisioning by going to Cloud Console -> Networking
  
 <hr>
 
-This concludes the module. Proceed to the next module.
+ This concludes the module. Please proceed to the [next module](Module-05.md).
 
 <hr>
  
