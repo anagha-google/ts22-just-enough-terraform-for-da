@@ -7,7 +7,7 @@ resource "google_composer_environment" "create_cloud_composer_env" {
     software_config {
       image_version = local.CLOUD_COMPOSER2_IMG_VERSION 
       env_variables = {
-        AIRFLOW_GCP_ACCOUNT_NAME = "${local.admin_upn_fqn}"
+        AIRFLOW_VAR_GCP_ACCOUNT_NAME = "${local.admin_upn_fqn}"
       }
     }
 
