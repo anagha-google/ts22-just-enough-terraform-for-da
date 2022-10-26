@@ -51,7 +51,7 @@ It merely greates regional buckets.
 Observe the output.<br>
 In the end, you should see-<br>
  ```
-Apply complete! Resources: 6 added, 0 changed, 0 destroyed.
+Apply complete! Resources: 7 added, 0 changed, 0 destroyed.
  ```
  
 ## 6. Validate the provisioning by going to Cloud Console -> Cloud Storage
