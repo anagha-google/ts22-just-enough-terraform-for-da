@@ -77,7 +77,7 @@ SELECT * FROM ts22_tf_lab_ds.icecream_sales_biglake_table LIMIT 1000
 
 <hr>
 
-This concludes the module. Please proceed to the next module.
+ This concludes the module. Please proceed to the [next module](Module-08.md).
 
 <hr>
 
