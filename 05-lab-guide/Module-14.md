@@ -1,4 +1,4 @@
-# Module 13: Customize a file with Terraform
+# Module 14: Customize a file with Terraform
 Often we need to customize files before running them, based on variables unique to the deployment. In this module, we will customize our Vertex AI Workbench notebook instance post startup scripts at Terraform runtime. <br>
 
 **Lab Module Duration:** <br>
