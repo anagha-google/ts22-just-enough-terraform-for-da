@@ -125,7 +125,7 @@ terraform apply --auto-approve
 Observe the output.<br>
 In the end, you should see-<br>
  ```
-Apply complete! Resources: 1 added, 0 changed, 0 destroyed.
+Apply complete! Resources: 5 added, 1 changed, 3 destroyed.
  ```
  
 ## 8. Validate the execution of the script
