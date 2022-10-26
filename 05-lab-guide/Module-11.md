@@ -19,6 +19,6 @@ f) It reads a Biglake table featuring icecream sales and does sales forecasting 
 
 <hr>
 
-This concludes the module. Proceed to the next module.
+ This concludes the module. Please proceed to the [next module](Module-12.md).
 
 <hr>
