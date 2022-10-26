@@ -1,4 +1,4 @@
-# Module 17: (Optional) Run a PySpark Notebook on the Managed Notebook instance on Vertex AI Workbench 
+# Module 17: (Optional) Run a PySpark Notebook (Chicago Crimes Analysis) on the Managed Notebook instance on Vertex AI Workbench 
 
 THIS IS A PREVIEW FEATURE (OCT 2022) AND NEEDS ALLOW_LISTING.<br><br>
 
@@ -42,5 +42,8 @@ gcloud beta dataproc sessions create spark $SESSION_NAME-$RANDOM  \
 
 
 <hr>
-This concludes the module. Proceed to the next module.
+
+ This concludes the module. Please proceed to the [next module](Module-18.md).
+
+
 <hr>
