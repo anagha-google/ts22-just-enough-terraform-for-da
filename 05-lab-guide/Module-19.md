@@ -28,6 +28,6 @@ Our Terraform providers can be glitchy. Consider shutting down the project if po
 
 <hr>
 
-This concludes the lab. DONT forget to delete the resources created in the lab.
+This concludes the lab. There is a tip in the next/last [module](Module-19.md) where you will learn (just informational) to run the entire provisioning in one shot. DONT forget to delete the resources created in the lab.
 
 <hr>
