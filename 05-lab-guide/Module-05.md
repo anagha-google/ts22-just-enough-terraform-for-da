@@ -1,4 +1,4 @@
-# Module 5. Cloud Storage buckets
+# Module 5. Create Cloud Storage buckets
  
 In this section, we will provision GCS buckets for Spark, dataproc, code, data, notebooks. <br>
 
