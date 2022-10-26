@@ -102,7 +102,7 @@ Apply complete! Resources: 2 added, 0 changed, 0 destroyed.
 Go to GCS and look up the files - they should not have the keyword 'YOUR_PROJECT_NUMBER' in them, and should have your actual project number substituted.
 
 <br>
-8.1. Post Startup Script for Managed Notebook Instance:
+8.1. Validate the substitution in the Post Startup Script for Managed Notebook Instance:
 
 ```
 PROJECT_ID=`gcloud config list --format "value(core.project)" 2>/dev/null`
@@ -112,7 +112,7 @@ gsutil cat gs://ts22-jetfdc_notebook_bucket-${PROJECT_NBR}/pyspark/mnbs-exec-pos
 
 <br>
 
-8.2. Post Startup Script for User Managed Notebook Instance:
+8.2. Validate the substitution in the Post Startup Script for User Managed Notebook Instance:
 
 ```
 PROJECT_ID=`gcloud config list --format "value(core.project)" 2>/dev/null`
