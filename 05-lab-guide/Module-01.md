@@ -137,6 +137,6 @@ Study the output and see the number of resources provisioned.
 
 <hr> 
 
-This concludes the module, proceed to the [next module](05-lab-guide/Module-02.md).
+This concludes the module, proceed to the [next module](Module-02.md).
 
 <hr>
