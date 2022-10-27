@@ -108,6 +108,12 @@ With this output-
 ```
 Apply complete! Resources: xx added, 0 changed, 0 destroyed.
 
+Outputs:
+
+CLOUD_COMPOSER_DAG_BUCKET = "gs://us-central1-ts-22-tf-lab-cc-XXXXX-bucket/dags"
+```
+
+
 ## 6. Review of what we provisioned and validations
 
 Start reading the lab guides from Module 1 to get a sound understanding and also validate the successful provisioning.
@@ -125,11 +131,5 @@ This concludes the lab.
 <hr>
 
 
-With this output-
-```
-Apply complete! Resources: 107 added, 0 changed, 0 destroyed.
 
-Outputs:
 
-CLOUD_COMPOSER_DAG_BUCKET = "gs://us-central1-ts-22-tf-lab-cc-XXXXX-bucket/dags"
-```
