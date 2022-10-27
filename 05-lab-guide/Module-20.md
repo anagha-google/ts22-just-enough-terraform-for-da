@@ -97,19 +97,21 @@ Run the below from the Terraform root directory in Cloud Shell.
 
 ```
 cd ~/ts22-just-enough-terraform-for-da/00-setup/
+
 terraform init
+
 terraform plan
+
 terraform apply --auto-approve
 ```
 
 This could take ~65 minutes to complete.
 
-With this output-
+You should see this this output-
 ```
 Apply complete! Resources: xx added, 0 changed, 0 destroyed.
 
 Outputs:
-
 CLOUD_COMPOSER_DAG_BUCKET = "gs://us-central1-ts-22-tf-lab-cc-XXXXX-bucket/dags"
 ```
 
