@@ -76,6 +76,7 @@ This could take ~5 minutes to complete.
 With this output-
 ```
 Apply complete! Resources: xx added, 0 changed, 0 destroyed.
+```
 
 <hr>
 
