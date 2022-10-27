@@ -1,4 +1,4 @@
-# Module 2: Enabling Google APIs and Updating Organization Policies
+# Module 2: Enable Google APIs and update Organization Policies
 
 1. At the onset of this lab (not just this module), we will just enable Google APIs and (optionally) update org policies. <br>
 2. We will review the Terraform scripts, commands, state
@@ -6,6 +6,9 @@
 
 **Note:** <br>
 The boolean for updating the org policies is in the terraform.tfvars. Google Customer engineers **need to** update org policies (default=true) in their designated environments, but this is not applicable for everyone. Set the boolean to false in the tfvars file if you dont need to org policies in your environment.<br>
+
+**Lab Module Duration:** <br>
+< 5 minutes 
 
 ## 1. Layout of the lab repo
 The following is the layout-<br>
@@ -20,21 +23,25 @@ The following is the layout-<br>
          README.md
 ```
          
-## 2. Scripts we will use/review  
+## 2. Scripts we will use/review in the Terraform root directory  
 
 ```
-~/ts22-just-enough-terraform-for-da
-         00-setup
-           ....main.tf<br>
-           ....variables.tf<br>
-           ....versions.tf<br>
-           ....terraform.tfvars <- Already has your preferences from running configure-preferences.sh in module 1<br>
-         01-datasets
-         02-scripts
-         03-notebooks
-         04-templates
-         05-lab-guide
-         README.md
+~/ts22-just-enough-terraform-for-da/00-setup
+
+           ....module_apis_and_policies
+               ....main.tf     <---- We will run this
+               ....variables.tf
+               
+           ....shelf
+           
+           ....main.tf
+           ....variables.tf
+           ....versions.tf
+
+           ....configure-preferences.sh
+           
+           ....terraform.tfvars 
+
 ```
 
 ## 3. Main.tf - review
@@ -113,7 +120,7 @@ Terraform has compared your real infrastructure against your configuration and f
  
 <hr>
  
- This concludes the module. Please proceed to the next module.
+ This concludes the module. Please proceed to the [next module](Module-03.md).
  
  <hr>
  

@@ -8,6 +8,9 @@ module "umsa_creation" {
   names      = ["${local.umsa}"]
   display_name = "User Managed Service Account"
   description  = "User Managed Service Account for Serverless Spark"
+  depends_on = [
+      module.setup_foundations
+  ]
 }
 
 /******************************************

@@ -1,26 +1,23 @@
 variable "project_id" {
   type        = string
-  description = "project id required"
+  description = "project id"
 }
 variable "project_name" {
  type        = string
- description = "project name in which demo deploy"
+ description = "project name"
 }
 variable "project_number" {
  type        = string
- description = "project number in which demo deploy"
+ description = "project number"
 }
 variable "gcp_account_name" {
- description = "user performing the demo"
+ description = "Your user ID"
 }
 variable "org_id" {
- description = "Organization ID in which project created"
+ description = "Organization ID in which project exists"
 }
 variable "cloud_composer_image_version" {
  description = "Version of Cloud Composer 2 image to use"
-}
-variable "spark_container_image_tag" {
- description = "Tag number to assign to container image"
 }
 variable "gcp_region" {
  description = "GCP region"
@@ -34,12 +31,13 @@ variable "gcp_multi_region" {
 variable "bq_connector_jar_gcs_uri" {
  description = "BQ connector jar to use"
 }
-variable "cloud_scheduler_time_zone" {
- description = "Cloud Scheduler Time Zone e.g. America/Chicago"
+variable "provision_vertex_ai_bool" {
+ description = "Boolean for provisioning Vertex AI Workbench for notebooks"
+ type = bool
+ default = true
 }
-
-variable "install_vertextai" {
- description = "Cloud Scheduler Time Zone e.g. America/Chicago"
+variable "update_org_policies_bool" {
+ description = "Boolean for editing organization policies"
  type = bool
  default = true
 }

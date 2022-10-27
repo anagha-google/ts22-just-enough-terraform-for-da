@@ -5,7 +5,6 @@ import datetime
 from airflow import models
 from airflow.operators import bash_operator
 from airflow.operators import python_operator
-from airflow.models import Variable
 
 
 default_dag_args = {

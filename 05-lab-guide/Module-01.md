@@ -1,16 +1,21 @@
 # Module 1: Setup foundations
 
 In this module, you will get started with Terraform.
-1. You will clone the lab Git repo
-2. Configure your preferences for the lab
-3. Run Terraform init
-4. Run Terraform plan and review the same
-5. In this module, the entities provisioned are - enabling Google APIs and updating Organization policies. 
+1. You will create a project manually
+2. Clone the lab Git repo
+3. Configure your preferences for the lab
+4. Run Terraform init
+5. Run Terraform plan and review the same
+6. In this module, the entities provisioned are - enabling Google APIs and updating Organization policies. 
 
-Duration: This module should take 5 minutes to complete
+**Lab Module Duration:** <br>
+5 minutes 
+
+**Prerequisite:** <br>
+Create a new project manually for this lab. 
 
 ## 1. Clone the repo
-Run this on Cloud Shell
+Run this on Cloud Shell scoped to the new project you created for the lab.
 ```
 cd ~
 git clone https://github.com/anagha-google/ts22-just-enough-terraform-for-da.git
@@ -32,6 +37,21 @@ cd ts22-just-enough-terraform-for-da
          README.md
 ```
 Explore the repo really quick.
+
+## 3. Layout of the Terraform root directory
+```
+~/ts22-just-enough-terraform-for-da/00-setup
+           
+           ....module_apis_and_policies
+           ....shelf
+           
+           ....main.tf
+           ....variables.tf
+           ....versions.tf
+           
+           ....configure-preferences.sh <--- We will run this 
+           
+```
 
 ## 3. Configure your preferences in the preferences script
 
@@ -119,6 +139,8 @@ terraform plan
 
 Study the output and see the number of resources provisioned.
 
-<hr>
-This concludes the module, proceed to the next module.
+<hr> 
+
+This concludes the module, proceed to the [next module](Module-02.md).
+
 <hr>
