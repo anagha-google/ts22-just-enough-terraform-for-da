@@ -33,14 +33,14 @@ cp shelf/network.tf .
 ```
 
 
-## 2. Run the terraform
+## 3. Run the terraform
 ```
 cd ~/ts22-just-enough-terraform-for-da/00-setup/
 terraform init
 terraform apply --auto-approve
 ```
  
-## 3. Review the Terraform script
+## 4. Review the Terraform script
 While its running, in a separate Cloud Shell tab, open the file and read its contents<br>
 ```
 cat ~/ts22-just-enough-terraform-for-da/00-setup/network.tf
@@ -53,17 +53,17 @@ e) It creates peers the network with the Google tenant network - again, needed f
 f) It then creates a router<br>
 g) And a NAT to allow downloads from the internet<br>
 
-4. Terraform will incrementally run every .tf file in the root directory and any updates to the same when an "apply" is issued. It will therefore run the network.tf<br>
-5. Observe the output in the other tab<br>
+Terraform will incrementally run every .tf file in the root directory and any updates to the same when an "apply" is issued. It will therefore run the network.tf<br>
+Observe the output in the other tab<br>
 In the end, you should see-<br>
  ```
 Apply complete! Resources: 8 added, 0 changed, 0 destroyed.
  ```
 
-## 4. Again, why "terraform init"?
+## 5. Again, why "terraform init"?
 We ran "terraform init" again as we are using some new GCP providers, everytime you introduce a new provider, you have to run the init command.
 
-## 5. Validate 
+## 6. Validate 
 Validate the provisioning by going to Cloud Console -> Networking 
  
 <hr>
