@@ -27,6 +27,7 @@ cd ts22-just-enough-terraform-for-da
 ## 2. Familiarize yourself with the layout
 
 ```
+THIS IS FYI - DO NOT EXECUTE
 ~/ts22-just-enough-terraform-for-da
          00-setup
          01-datasets
