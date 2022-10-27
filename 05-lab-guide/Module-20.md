@@ -16,26 +16,14 @@ cd ts22-just-enough-terraform-for-da
 
 <hr>
 
-## 2. Copy the .tf in shelf/ to the Terraform root directory
+## 2. Edit the preferences script & run it
 
-Run the below in cloud shell
-```
-cd ~/ts22-just-enough-terraform-for-da/00-setup
-cp -r shelf/* .
-```
-
-<hr>
-
-## 3. Edit the preferences script & run it
-
-3.1. Open the script configure-preferences.sh and review it
+2.1. Open the script configure-preferences.sh and review it
 ```
 cat ~/ts22-just-enough-terraform-for-da/00-setup/configure-preferences.sh
 ```
 
-
-
-3.2. Edit to customize your region. No change is needed if you are okay with running in us-central region.
+2.2. Edit to customize your region. No change is needed if you are okay with running in us-central region.
 
 ```
 cd ~/ts22-just-enough-terraform-for-da/00-setup
@@ -64,7 +52,7 @@ Where you can make changes is-
 3. PROVISION_VERTEX_AI boolean if you want to skip the Vertex AI modules
 
 
-3.3. Run it-
+2.3. Run it-
 ```
 cd ~/ts22-just-enough-terraform-for-da/00-setup
 ./configure-preferences.sh
@@ -72,14 +60,69 @@ cd ~/ts22-just-enough-terraform-for-da/00-setup
 
 <hr>
 
-## 4. Run the Terraform scripts
+## 3. Run the foundational Terraform module
+
+This just enables Google APIs and (optionally) updates the org policies, and effectively executes the module - module_apis_and_policies/main.tf in the Terrafrom root directory ~/ts22-just-enough-terraform-for-da/00-setup. All resources created in the lab depend on the successful completion of this Terraform module.
+
+
 ```
 cd ~/ts22-just-enough-terraform-for-da/00-setup/
 terraform init
 terraform apply --auto-approve
 ```
 
-This could take ~1 hour to complete.
+This could take ~5 minutes to complete.
+
+With this output-
+```
+Apply complete! Resources: xx added, 0 changed, 0 destroyed.
+
+<hr>
+
+## 4. Copy the .tf in shelf/ to the Terraform root directory
+
+Run the below in cloud shell. What this does is copy all the terraform templates for individual GCP Data Analytics services into the Terraform root directory, so that we can provision them in one shot.
+
+```
+cd ~/ts22-just-enough-terraform-for-da/00-setup
+cp -r shelf/* .
+```
+
+<hr>
+
+## 5. Provision Data Analytics services
+
+Run the below from the Terraform root directory in Cloud Shell.
+
+```
+cd ~/ts22-just-enough-terraform-for-da/00-setup/
+terraform init
+terraform plan
+terraform apply --auto-approve
+```
+
+This could take ~65 minutes to complete.
+
+With this output-
+```
+Apply complete! Resources: xx added, 0 changed, 0 destroyed.
+
+## 6. Review of what we provisioned and validations
+
+Start reading the lab guides from Module 1 to get a sound understanding and also validate the successful provisioning.
+<br>
+E.g. <br>
+GCS buckets created<br>
+Objects copied to buckets<br>
+Dataproc cluster created...<br>
+
+## 7. Dont forget to
+Shut down the project or run "terraform destroy" to stop the billing.
+
+<hr>
+This concludes the lab.
+<hr>
+
 
 With this output-
 ```
@@ -89,12 +132,3 @@ Outputs:
 
 CLOUD_COMPOSER_DAG_BUCKET = "gs://us-central1-ts-22-tf-lab-cc-XXXXX-bucket/dags"
 ```
-
-<hr>
-
-## 5. Dont forget to
-Shut down the project or run "terraform destroy" to stop the billing.
-
-<hr>
-This concludes the lab.
-<hr>
