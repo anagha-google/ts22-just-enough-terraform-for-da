@@ -41,6 +41,7 @@ Explore the repo really quick.
 
 ## 3. Layout of the Terraform root directory
 ```
+THIS IS FYI - DO NOT EXECUTE
 ~/ts22-just-enough-terraform-for-da/00-setup
            
            ....module_apis_and_policies
