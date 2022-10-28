@@ -17,8 +17,7 @@ Terraform noobs
 <hr>
 
 ## 4. Format
-Self-paced, fully scripted<br> 
-This is not a challenge lab.
+Self-paced, fully scripted, no research is required.<br> 
 
 <hr>
 
@@ -44,7 +43,7 @@ Production hardened Terraform Blueprints: https://github.com/GoogleCloudPlatform
 
 | # | Google Cloud Collaborators | Contribution  | 
 | -- | :--- | :--- |
-| 1. | Anagha Khanolkar | Creator |
+| 1. | Anagha Khanolkar | Vision, author |
 | 2. | Rick Chen | Terraform expertise, feedback |
 | 3. | Jay O' Leary | Testing and feedback |
 
@@ -59,7 +58,9 @@ Production hardened Terraform Blueprints: https://github.com/GoogleCloudPlatform
 
 ## 10. Get started with the lab
 
-The lab modules listed are best run sequentially to avoid dependency issues. 
+The lab modules listed are best run sequentially to avoid dependency issues. <br>
+Each module has an explanation of exactly what is covered, and covers one service at a time to make it bite-sized.
+
 
 | # | Module | 
 | -- | :--- | 
