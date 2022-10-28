@@ -22,7 +22,7 @@ Self-paced, fully scripted, no research is required.<br>
 <hr>
 
 ## 5. Terraform Provider/Data Analytics Services Scope
-The [modules listing](README.md#10-get-started-with-the-lab) below highlights services in scope. Its not all-encompassing. Contributions are welcome.
+The following is a subset of Google Data Analytics portfolio covered. Its not all-encompassing. Contributions are welcome.
 
 ![README](06-images/ts22-tf-lab-1.png)   
 <br><br>
