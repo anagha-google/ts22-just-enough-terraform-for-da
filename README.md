@@ -2,12 +2,12 @@
 
 ## 1. About
 
-This hands-on lab strives to demystify using Terraform to provision popular Data Analytics services on GCP, as well as perform common functions like customize scripts, run shell scripts and such.<br>
+This is a self paced hands-on lab that strives to demystify using Terraform to provision popular **Data Analytics** services on GCP. 
 
 <hr>
 
-## 2. Audience
-It is intended for Terraform noobs.
+## 2. Target Audience
+Terraform noobs
 
 <hr>
 
@@ -18,7 +18,7 @@ It is intended for Terraform noobs.
 
 ## 4. Format
 Self-paced, fully scripted<br> 
-This is not a challenge lab
+This is not a challenge lab.
 
 <hr>
 
@@ -45,8 +45,8 @@ Production hardened Terraform Blueprints: https://github.com/GoogleCloudPlatform
 | # | Google Cloud Collaborators | Contribution  | 
 | -- | :--- | :--- |
 | 1. | Anagha Khanolkar | Creator |
-| 2. | Rick Chen | Collaborator |
-| 3. | Jay O' Leary | Tester |
+| 2. | Rick Chen | Terraform expertise, feedback |
+| 3. | Jay O' Leary | Testing and feedback |
 
 <hr>
 
