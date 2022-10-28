@@ -33,6 +33,7 @@ The following is a subset of Google Data Analytics portfolio covered. Its not al
 
 Applicable for Google Customer Engineers, in Argolis-<br>
 Grant yourself Organization Policy Administrator role from Cloud Console, at an Organization scope<br>
+(If you have done created VPC native services in Argolis, you have likely already granted yourself this permission<br>
 Don't forget to set the context in the Cloud console back to the project you created.
 
 ## 7. Lab Goals
