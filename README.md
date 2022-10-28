@@ -26,20 +26,26 @@ The [modules listing](README.md#10-get-started-with-the-lab) below highlights se
 
 <hr>
 
-## 6. Lab Goals
+## 6. Prerequisites
+
+Applicable for Google Customer Engineers, in Argolis-<br>
+Grant yourself Organization Policy Administrator role from Cloud Console, at an Organization level<br>
+Don't forget to set the project back to the project you created in Step 1 above in the UI.
+
+## 7. Lab Goals
 1. Understanding of core Terraform concepts
 2. Knowledge of creating a set of Data Analytics services 
 3. Terraform scripts that can be repurposed for your trails, PoCs, projects and such
 
 <hr>
 
-## 7. Resources
+## 8. Resources
 Hashicorp docs: https://registry.terraform.io/providers/hashicorp/google/4.41.0 <br>
 Production hardened Terraform Blueprints: https://github.com/GoogleCloudPlatform/cloud-foundation-fabric <br>
 
 <hr>
 
-## 8. Google Cloud Collaborator Credits
+## 9. Google Cloud Collaborator Credits
 
 | # | Google Cloud Collaborators | Contribution  | 
 | -- | :--- | :--- |
@@ -49,14 +55,14 @@ Production hardened Terraform Blueprints: https://github.com/GoogleCloudPlatform
 
 <hr>
 
-## 9. Lab flow
+## 10. Lab flow
 
 ![README](06-images/ts22-tf-lab.png)   
 <br><br>
 
 <hr>
 
-## 10. Get started with the lab
+## 11. Get started with the lab
 
 The lab modules listed are best run sequentially to avoid dependency issues. <br>
 Each module has an explanation of exactly what is covered, and covers one service at a time to make it bite-sized.
@@ -87,15 +93,15 @@ Each module has an explanation of exactly what is covered, and covers one servic
 
 <hr>
 
-## 11. Dont forget to
+## 12. Dont forget to
 Shut down the environment. [Module 19](05-lab-guide/Module-19.md) covers the same. 
 
-## 12. Contributions welcome
+## 13. Contributions welcome
 Community contribution to improve the lab is very much appreciated. <br>
 
 <hr>
 
-## 13. Getting help
+## 14. Getting help
 If you have any questions or if you found any problems with this repository, please report through GitHub issues.
 
 <hr>
