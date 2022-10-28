@@ -64,6 +64,7 @@ Production hardened Terraform Blueprints: https://github.com/GoogleCloudPlatform
 <br><br>
 
 Optional exercises:
+
 ![README](06-images/ts22-tf-lab-2.png)   
 <br><br>
 
