@@ -109,6 +109,12 @@ If you have any questions or if you found any problems with this repository, ple
 
 <hr>
 
+## 15. Want something added to this lab?
+Log an entry in GitHub issues-
+https://github.com/anagha-google/ts22-just-enough-terraform-for-da/issues
+
+<hr>
+
 
 
 
