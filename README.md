@@ -32,8 +32,8 @@ The following is a subset of Google Data Analytics portfolio covered. Its not al
 ## 6. Prerequisites
 
 Applicable for Google Customer Engineers, in Argolis-<br>
-Grant yourself Organization Policy Administrator role from Cloud Console, at an Organization level<br>
-Don't forget to set the project back to the project you created in Step 1 above in the UI.
+Grant yourself Organization Policy Administrator role from Cloud Console, at an Organization scope<br>
+Don't forget to set the context in the Cloud console back to the project you created.
 
 ## 7. Lab Goals
 1. Understanding of core Terraform concepts
