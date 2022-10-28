@@ -7,5 +7,5 @@
 3. Save
 4. Switch context back to the project
 
-![README](06-images/ts22-tf-lab-3.png)   
+![README](../06-images/ts22-tf-lab-3.png)   
 <br><br>
