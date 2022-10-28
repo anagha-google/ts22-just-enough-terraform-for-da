@@ -2,7 +2,7 @@
 
 ## 1. About
 
-This is a self paced hands-on lab that strives to demystify using Terraform to provision popular **Data Analytics** services on GCP. 
+This is a self paced hands-on lab that strives to **demystify using Terraform** to provision **Data Analytics** services on GCP. Not all Data Analytics services are covered. This lab does not feature any dazzling demos - the focus is purely environment provisioning-configuring automation.  
 
 <hr>
 
@@ -61,6 +61,10 @@ Production hardened Terraform Blueprints: https://github.com/GoogleCloudPlatform
 ## 10. Lab flow
 
 ![README](06-images/ts22-tf-lab.png)   
+<br><br>
+
+Optional exercises:
+![README](06-images/ts22-tf-lab-2.png)   
 <br><br>
 
 <hr>
