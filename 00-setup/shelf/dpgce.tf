@@ -1,5 +1,5 @@
 resource "google_dataproc_autoscaling_policy" "create_autoscale_policy" {
-  policy_id = local.autoscale_policy_nm
+  policy_id = local.dpgce_autoscale_policy_nm
   location  = local.location
 
   worker_config {
