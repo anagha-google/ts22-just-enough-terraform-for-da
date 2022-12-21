@@ -48,7 +48,7 @@ resource "google_dataproc_cluster" "create_dpgce_cluster" {
     }
     
     autoscaling_config {
-    policy_uri = "projects/${local.project_id}/locations/${local.location}/autoscalingPolicies/${local.autoscale_policy_nm}"
+    policy_uri = "projects/${local.project_id}/locations/${local.location}/autoscalingPolicies/${local.dpgce_autoscale_policy_nm}"
     }
     
     
