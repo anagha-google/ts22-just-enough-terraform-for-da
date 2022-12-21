@@ -93,7 +93,8 @@ resource "google_dataproc_cluster" "create_dpgce_cluster" {
   depends_on = [
     time_sleep.sleep_after_network_and_storage_steps,
     google_dataproc_metastore_service.datalake_metastore_creation,
-    google_dataproc_cluster.create_sphs
+    google_dataproc_cluster.create_sphs,
+    google_dataproc_autoscaling_policy.create_autoscale_policy
   ]  
 }
 
@@ -117,6 +118,5 @@ resource "time_sleep" "sleep_after_creating_dpgce" {
 
   ]
 }
-
 
 

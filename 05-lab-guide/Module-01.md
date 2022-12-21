@@ -1,16 +1,21 @@
 # Module 1: Setup foundations
 
 In this module, you will get started with Terraform.
-1. You will clone the lab Git repo
-2. Configure your preferences for the lab
-3. Run Terraform init
-4. Run Terraform plan and review the same
-5. In this module, the entities provisioned are - enabling Google APIs and updating Organization policies. 
+1. You will create a project manually
+2. Clone the lab Git repo
+3. Configure your preferences for the lab
+4. Run Terraform init
+5. Run Terraform plan and review the same
+6. In this module, the entities provisioned are - enabling Google APIs and updating Organization policies. 
 
-Duration: This module should take 5 minutes to complete
+**Lab Module Duration:** <br>
+5 minutes 
+
+**Prerequisite:** <br>
+Create a new project manually for this lab. 
 
 ## 1. Clone the repo
-Run this on Cloud Shell
+Run this on Cloud Shell scoped to the new project you created for the lab.
 ```
 cd ~
 git clone https://github.com/anagha-google/ts22-just-enough-terraform-for-da.git
@@ -22,6 +27,7 @@ cd ts22-just-enough-terraform-for-da
 ## 2. Familiarize yourself with the layout
 
 ```
+THIS IS FYI - DO NOT EXECUTE
 ~/ts22-just-enough-terraform-for-da
          00-setup
          01-datasets
@@ -32,6 +38,22 @@ cd ts22-just-enough-terraform-for-da
          README.md
 ```
 Explore the repo really quick.
+
+## 3. Layout of the Terraform root directory
+```
+THIS IS FYI - DO NOT EXECUTE
+~/ts22-just-enough-terraform-for-da/00-setup
+           
+           ....module_apis_and_policies
+           ....shelf
+           
+           ....main.tf
+           ....variables.tf
+           ....versions.tf
+           
+           ....configure-preferences.sh <--- We will run this 
+           
+```
 
 ## 3. Configure your preferences in the preferences script
 
@@ -67,7 +89,7 @@ project_name = "ts22-lab"
 gcp_account_name = "xxxxx@akhanolkar.altostrat.com"
 org_id = "23xxx571"
 bq_connector_jar_gcs_uri = "gs://spark-lib/bigquery/spark-bigquery-with-dependencies_2.12-0.22.2.jar"
-cloud_composer_image_version = "composer-2.0.11-airflow-2.2.3"
+cloud_composer_image_version = "composer-2.0.29-airflow-2.2.5"
 gcp_region = "us-central1"
 gcp_zone = "us-central1-a"
 gcp_multi_region = "US"
@@ -119,6 +141,8 @@ terraform plan
 
 Study the output and see the number of resources provisioned.
 
-<hr>
-This concludes the module, proceed to the next module.
+<hr> 
+
+This concludes the module, proceed to the [next module](Module-02.md).
+
 <hr>
