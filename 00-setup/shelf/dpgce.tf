@@ -1,3 +1,29 @@
+resource "google_dataproc_autoscaling_policy" "create_autoscale_policy" {
+  policy_id = local.dpgce_autoscale_policy_nm
+  location  = local.location
+
+  worker_config {
+    max_instances = 2
+  }
+
+  secondary_worker_config {
+    min_instances = 0
+    max_instances = 10
+  }
+
+  basic_algorithm {
+    yarn_config {
+      graceful_decommission_timeout = "30s"
+      scale_up_factor   = 0.5
+      scale_down_factor = 0.5
+    }
+  }
+  depends_on = [
+    time_sleep.sleep_after_network_and_storage_steps
+  ]
+}
+
+
 resource "google_dataproc_cluster" "create_dpgce_cluster" {
   
   name     = "${local.dpgce_nm}"
@@ -20,6 +46,12 @@ resource "google_dataproc_cluster" "create_dpgce_cluster" {
     endpoint_config {
         enable_http_port_access = "true"
     }
+    
+    autoscaling_config {
+    policy_uri = "projects/${local.project_id}/locations/${local.location}/autoscalingPolicies/${local.autoscale_policy_nm}"
+    }
+    
+    
     # Override or set some custom properties
     software_config {
       image_version = "2.0-debian10"
@@ -61,7 +93,8 @@ resource "google_dataproc_cluster" "create_dpgce_cluster" {
   depends_on = [
     time_sleep.sleep_after_network_and_storage_steps,
     google_dataproc_metastore_service.datalake_metastore_creation,
-    google_dataproc_cluster.create_sphs
+    google_dataproc_cluster.create_sphs,
+    google_dataproc_autoscaling_policy.create_autoscale_policy
   ]  
 }
 
@@ -78,7 +111,6 @@ resource "google_storage_bucket_object" "copy_notebook_to_dpgce_bucket" {
   ]
 }
 
-<<<<<<< HEAD
 resource "time_sleep" "sleep_after_creating_dpgce" {
   create_duration = "120s"
   depends_on = [
@@ -87,7 +119,6 @@ resource "time_sleep" "sleep_after_creating_dpgce" {
   ]
 }
 
-=======
->>>>>>> main
+
 
 
