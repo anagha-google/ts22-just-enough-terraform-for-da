@@ -78,7 +78,6 @@ resource "google_storage_bucket_object" "copy_notebook_to_dpgce_bucket" {
   ]
 }
 
-<<<<<<< HEAD
 resource "time_sleep" "sleep_after_creating_dpgce" {
   create_duration = "120s"
   depends_on = [
@@ -87,7 +86,6 @@ resource "time_sleep" "sleep_after_creating_dpgce" {
   ]
 }
 
-=======
->>>>>>> main
+
 
 
