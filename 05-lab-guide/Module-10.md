@@ -105,3 +105,12 @@ d) Make sure JupyterLa is enabled and can be opened. We will use a notebook in t
  This concludes the module. Please proceed to the [next module](Module-11.md).
 
 <hr>
+
+## Bonus:
+Here is the gcloud equivalent of what we just did via Terraform:
+
+```
+Blah
+
+
+```
