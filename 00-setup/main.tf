@@ -61,7 +61,7 @@ mnb_server_nm               = "${local.resource_prefix}-managed-notebook-server"
 
 dpms_nm                     = "${local.resource_prefix}-dpms-${local.project_nbr}"
 dpgce_nm                    = "${local.resource_prefix}-dpgce-${local.project_nbr}"
-
+dpgce_autoscale_policy_nm   = "dpgce-autoscale-policy-${local.project_nbr}"
 }
 
 module "setup_foundations" {
