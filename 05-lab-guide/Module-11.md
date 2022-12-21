@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 2f1d3c15597ad21d48ae5cb42a63faf652d9df8b
 # Module 11: (Optional) Run a PySpark notebook on Dataproc Cluster on GCE on a BigLake table
  
 In the prior module we created a Dataproc cluster with Jupyter enabled as an optional component, and we uploaded a notebook to the specific GCS path where Jupyter on Dataproc can recognize and make available.<br>
@@ -20,6 +23,7 @@ f) It reads a Biglake table featuring icecream sales and does sales forecasting 
 
 <hr>
 
+<<<<<<< HEAD
  This concludes the module. Please proceed to the [next module](Module-12.md).
 =======
 # Module 11: (Optional) Run a Serverless Spark batch job
@@ -125,5 +129,9 @@ e) Click on the notebook that opens up and execute the notebook. <br>
 
 This concludes the module. Proceed to the next module.
 >>>>>>> main
+=======
+This concludes the module. Please proceed to the [next module](Module-12.md).
+
+>>>>>>> 2f1d3c15597ad21d48ae5cb42a63faf652d9df8b
 
 <hr>

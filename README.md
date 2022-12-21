@@ -2,12 +2,12 @@
 
 ## 1. About
 
-This hands-on lab strives to demystify using Terraform to provision popular Data Analytics services on GCP, as well as perform common functions like customize scripts, run shell scripts and such.<br>
+This is a self paced hands-on lab that strives to **demystify using Terraform** to provision **Data Analytics** services on GCP. Not all Data Analytics services are covered. This lab does not feature any dazzling demos - the focus is purely environment provisioning-configuring automation.  
 
 <hr>
 
-## 2. Audience
-It is intended for Terraform noobs.
+## 2. Target Audience
+Terraform noobs
 
 <hr>
 
@@ -17,49 +17,65 @@ It is intended for Terraform noobs.
 <hr>
 
 ## 4. Format
-Self-paced, fully scripted<br> 
-This is not a challenge lab
+Self-paced, fully scripted, no research is required.<br> 
 
 <hr>
 
-## 5. Data Analytics Services Scope
-The [modules listing](README.md#10-get-started-with-the-lab) below highlights services in scope. Its not all-encompassing. Contributions are welcome.
+## 5. Terraform Provider/Data Analytics Services Scope
+The following is a subset of Google Data Analytics portfolio covered. Its not all-encompassing. Contributions are welcome.
+
+![README](06-images/ts22-tf-lab-1.png)   
+<br><br>
 
 <hr>
 
-## 6. Lab Goals
+## 6. Prerequisites
+
+Applicable for Google Customer Engineers, in Argolis-<br>
+[Grant yourself Organization Policy Administrator role](05-lab-guide/Misc.md) from Cloud Console, at an Organization scope<br>
+(If you have done created VPC native services in Argolis, you have likely already granted yourself this permission<br>
+Don't forget to set the context in the Cloud console back to the project you created.
+
+## 7. Lab Goals
 1. Understanding of core Terraform concepts
 2. Knowledge of creating a set of Data Analytics services 
 3. Terraform scripts that can be repurposed for your trails, PoCs, projects and such
 
 <hr>
 
-## 7. Resources
+## 8. Resources
 Hashicorp docs: https://registry.terraform.io/providers/hashicorp/google/4.41.0 <br>
 Production hardened Terraform Blueprints: https://github.com/GoogleCloudPlatform/cloud-foundation-fabric <br>
 
 <hr>
 
-## 8. Google Cloud Collaborator Credits
+## 9. Google Cloud Collaborator Credits
 
 | # | Google Cloud Collaborators | Contribution  | 
 | -- | :--- | :--- |
-| 1. | Anagha Khanolkar | Creator |
-| 2. | Rick Chen | Collaborator |
-| 3. | Jay O' Leary | Tester |
+| 1. | Anagha Khanolkar | Vision, author |
+| 2. | Rick Chen | Terraform expertise, feedback |
+| 3. | Jay O' Leary | Testing and feedback |
 
 <hr>
 
-## 9. Lab flow
+## 10. Lab flow
 
 ![README](06-images/ts22-tf-lab.png)   
 <br><br>
 
+Optional exercises:
+
+![README](06-images/ts22-tf-lab-2.png)   
+<br><br>
+
 <hr>
 
-## 10. Get started with the lab
+## 11. Get started with the lab
 
-The lab modules listed are best run sequentially to avoid dependency issues. 
+The lab modules listed are best run sequentially to avoid dependency issues. <br>
+Each module has an explanation of exactly what is covered, and covers one service at a time to make it bite-sized.
+
 
 | # | Module | 
 | -- | :--- | 
@@ -86,16 +102,22 @@ The lab modules listed are best run sequentially to avoid dependency issues.
 
 <hr>
 
-## 11. Dont forget to
+## 12. Dont forget to
 Shut down the environment. [Module 19](05-lab-guide/Module-19.md) covers the same. 
 
-## 12. Contributions welcome
+## 13. Contributions welcome
 Community contribution to improve the lab is very much appreciated. <br>
 
 <hr>
 
-## 13. Getting help
+## 14. Getting help
 If you have any questions or if you found any problems with this repository, please report through GitHub issues.
+
+<hr>
+
+## 15. Want something added to this lab?
+Log an entry in [GitHub issues](https://github.com/anagha-google/ts22-just-enough-terraform-for-da/issues)
+
 
 <hr>
 
